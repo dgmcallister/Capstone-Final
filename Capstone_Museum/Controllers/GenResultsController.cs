@@ -12,20 +12,22 @@ namespace Capstone_Museum.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GenResultsController : ControllerBase
+    public class GenResultsController : Controller
     {
         public IActionResult Index()
         {
-            return View();
+            var json = GetGenResults();            
+            return View(json);
         }
-        public async static Task<string> GetGenResults()
+        public async static Task<GenResults.RootObject> GetGenResults()
         {
             var guid = "ALMNH:ES";
             var catNum = 4;
             var url = Constants.baseApi + "?guid_prefix=" + guid + "&catnum=" + catNum;
             var client = new HttpClient();
-            var json = await client.GetStringAsync(url);
-            return json;
+            string json = await client.GetStringAsync(url);
+            var model = JsonConvert.DeserializeObject<GenResults.RootObject>(json);
+            return model;
         }
     }
 }
