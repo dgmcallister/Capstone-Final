@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Capstone_Museum.Models.GenResults>
+﻿@model IEnumerable<Capstone_Museum.Models.GenResults.ResultObject>
 
 @{
     ViewData["Title"] = "Index";
@@ -19,9 +19,17 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.DisplayFor(modelItem => item.objectId);
+                @Html.DisplayFor(modelItem => item.GUID);
+                @Html.DisplayFor(modelItem => item.sciName);
+                @Html.DisplayFor(modelItem => item.Country);
+                @Html.DisplayFor(modelItem => item.State);
+                @Html.DisplayFor(modelItem => item.Locality);
+                @Html.DisplayFor(modelItem => item.Date);
+                @Html.DisplayFor(modelItem => item.Lat);
+                @Html.DisplayFor(modelItem => item.Long);
+                @Html.DisplayFor(modelItem => item.uncertaintyMeters);
+
             </td>
         </tr>
 }

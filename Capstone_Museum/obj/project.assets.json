@@ -6052,19 +6052,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HAdams20\\.nuget\\packages\\": {}
+    "C:\\Users\\wajaa\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HAdams20\\source\\repos\\Capstone_Museum\\Capstone_Museum\\Capstone_Museum.csproj",
+      "projectUniqueName": "C:\\Users\\wajaa\\source\\repos\\CFinal\\Capstone_Museum\\Capstone_Museum.csproj",
       "projectName": "Capstone_Museum",
-      "projectPath": "C:\\Users\\HAdams20\\source\\repos\\Capstone_Museum\\Capstone_Museum\\Capstone_Museum.csproj",
-      "packagesPath": "C:\\Users\\HAdams20\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HAdams20\\source\\repos\\Capstone_Museum\\Capstone_Museum\\obj\\",
+      "projectPath": "C:\\Users\\wajaa\\source\\repos\\CFinal\\Capstone_Museum\\Capstone_Museum.csproj",
+      "packagesPath": "C:\\Users\\wajaa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wajaa\\source\\repos\\CFinal\\Capstone_Museum\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\HAdams20\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wajaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
