@@ -23,7 +23,7 @@ namespace Capstone_Museum.Models
         public class RootObject
         {
             public List<string> COLUMNS { get; set; }
-            public List<List<ResultObject>> DATA { get; set; }
+            public List<List<string>> DATA { get; set; }
 
         }
 
