@@ -69,8 +69,6 @@ namespace Capstone_Museum.Controllers
                 retObj.DATA = dList;
                 return retObj;
             }
-            
-
         }
     }
 }
