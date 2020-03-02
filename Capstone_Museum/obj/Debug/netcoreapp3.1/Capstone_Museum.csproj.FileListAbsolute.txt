@@ -2,6 +2,13 @@ C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\appse
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\Capstone_Museum.exe
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\Capstone_Museum.deps.json
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\Capstone_Museum.runtimeconfig.json
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\Capstone_Museum.runtimeconfig.dev.json
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\Capstone_Museum.dll
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\Capstone_Museum.pdb
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\Capstone_Museum.Views.dll
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\Capstone_Museum.Views.pdb
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\Json.Net.dll
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
@@ -76,9 +83,9 @@ C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\ru\Mi
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.csprojAssemblyReference.cache
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\staticwebassets\Capstone_Museum.StaticWebAssets.Manifest.cache
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\staticwebassets\Capstone_Museum.StaticWebAssets.xml
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.RazorAssemblyInfo.cache
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.RazorAssemblyInfo.cs
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.AssemblyInfoInputs.cache
@@ -86,9 +93,12 @@ C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capst
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.TagHelpers.input.cache
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.TagHelpers.output.cache
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.RazorCoreGenerate.cache
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Razor\Views\Details\Index.cshtml.g.cs
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Razor\Views\GenResults\Index.cshtml.g.cs
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Razor\Views\SearchResults\Index.cshtml.g.cs
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Razor\Views\Search\Index.cshtml.g.cs
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -96,4 +106,8 @@ C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Razor
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.RazorTargetAssemblyInfo.cache
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.RazorTargetAssemblyInfo.cs
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.Views.pdb
 C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.csproj.CopyComplete
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.dll
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.pdb
+C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\obj\Debug\netcoreapp3.1\Capstone_Museum.csprojAssemblyReference.cache

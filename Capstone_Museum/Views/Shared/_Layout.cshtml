@@ -1,36 +1,65 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
+    @*<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Capstone_Museum</title>
+    <title>@ViewData["Title"] - Museum_Prototypes</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/site.css" />*@
+
+    <title>Tables - UA Template Documentation | The University of Alabama</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,300,600,700" rel="stylesheet" />
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../css/style.min.css" rel="stylesheet" />
+    <link href="../css/prism.min.css" rel="stylesheet" />
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Capstone_Museum</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="GenResults" asp-action="Index">GenResults</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div class="sticky-header-container">
+            <div id="sticky-header" class="header-main header-dark navbar mega-menu disable-hover" data-spy="affix" data-offset-top="50">
+                <div class="container">
+                    <div class="navbar-container">
+                        <div class="navbar-header">
+                            <img src="~/css/pictures/cropped-ALMNH_white.png" width="240" height="80" style="padding-top:20px;" />
+
+                            <a href="#" class="btn btn-default nav-toggle visible-xs visible-sm">
+                                <span class="sr-only">Toggle navigation</span>
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div> <!-- .navbar-header -->
+
+                        <nav class="navbar-right">
+                            <ul class="nav navbar-nav main-nav">
+                                <li class="visible-xs visible-sm">
+                                    <a href="#" class="nav-toggle text-center">
+                                        <span class="sr-only">Close navigation</span>
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="/Search">
+                                        Search
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/Searchresults">
+                                        Search Results
+                                    </a>
+                                </li>
+
+                            </ul>                            
+                        </nav>
+                    </div> <!-- .navbar-container -->
+                </div> <!-- .container -->
+            </div> <!-- .header-main -->
+        </div> <!-- .sticky-header-container -->
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -38,10 +67,42 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - Capstone_Museum - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer>
+        <div class="footer-copyright bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3">
+                                <a class="ua-logo ua-logo-stacked" href="https://www.ua.edu" title="The University of Alabama" rel="home">
+                                    <span class="sr-only">The University of Alabama</span>
+                                </a>
+                            </div> <!-- .col-md-3 -->
+
+                            <div class="col-md-9 col-md-9">
+                                <div class="pull-right">
+                                    <ul class="disclaimer-list list-inline text-right">
+                                        <li><a href="#">Link 1</a></li>
+                                        <li><a href="#">Link 2</a></li>
+                                        <li><a href="#">Link 3</a></li>
+                                        <li><a href="#">Link 4</a></li>
+                                        <li><a href="#">Link 5</a></li>
+                                        <li><a href="#">Link 6</a></li>
+                                        <li><a href="#">Link 7</a></li>
+                                    </ul>
+
+                                    <p class="copyright-text text-right">
+                                        <a href="https://www.ua.edu/copyright">Copyright &copy; 2016</a> <a href="https://www.ua.edu">The University of Alabama</a>
+                                        | <a href="https://www.ua.edu/disclaimer">Disclaimer</a>
+                                        | <a href="https://www.ua.edu/privacy">Privacy</a>
+                                    </p>
+                                </div> <!-- .pull-right -->
+                            </div> <!-- .col-md-9 -->
+                        </div> <!-- .row -->
+                    </div> <!-- .col-md-12 -->
+                </div> <!-- .row -->
+            </div> <!-- .container -->
+        </div> <!-- .footer-copyright -->
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

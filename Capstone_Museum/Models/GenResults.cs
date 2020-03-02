@@ -19,6 +19,20 @@ namespace Capstone_Museum.Models
             public string Lat { get; set; }
             public string Long { get; set; }
             public string uncertaintyMeters { get; set; }
+            public string Kingdom { get; set; }
+            public string Phylum { get; set; }
+            public string Class { get; set; }
+            public string Order { get; set; }
+            public string Family { get; set; }
+            public string subfamily { get; set; }
+            public string Genus { get; set; }
+            public string commonName { get; set; }
+            public string idBy { get; set; }
+            public string natureOfId { get; set; }
+            public string Remarks { get; set; }
+            public decimal mapLat { get; set; }
+            public decimal mapLong { get; set; }
+
         }
         public class RootObject
         {
