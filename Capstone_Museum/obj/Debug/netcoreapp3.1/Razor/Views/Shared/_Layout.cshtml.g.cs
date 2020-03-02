@@ -13,14 +13,14 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 1 "C:\Users\bmott20\source\repos\CFinal\Capstone_Museum\Views\_ViewImports.cshtml"
+#line 1 "C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\Views\_ViewImports.cshtml"
 using Capstone_Museum;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\bmott20\source\repos\CFinal\Capstone_Museum\Views\_ViewImports.cshtml"
+#line 2 "C:\Users\wajaa\source\repos\CFinal\Capstone_Museum\Views\_ViewImports.cshtml"
 using Capstone_Museum.Models;
 
 #line default
