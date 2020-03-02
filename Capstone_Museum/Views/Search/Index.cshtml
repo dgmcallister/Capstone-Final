@@ -26,477 +26,1526 @@
     <link href="../../css/custom.css" rel="stylesheet" />
 </head>
 <body>
+    @*Justified Tabs Section*@
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li class="active">
+            <a href="#generalSearch-6" role="tab" data-toggle="tab">General Search</a>
+        </li>
+        <li>
+            <a href="#lifeSciences-6" role="tab" data-toggle="tab">Life Sciences</a>
+        </li>
+        <li>
+            <a href="#earthSciences-6" role="tab" data-toggle="tab">Earth Sciences</a>
+        </li>
+        <li>
+            <a href="#culture-6" role="tab" data-toggle="tab">Culture and Ethnology</a>
+        </li>
+    </ul>
+    @*General Search Tab*@
+<div class="tab-content">
+    <div class="tab-pane active" id="generalSearch-6">
+        <h1>General Search: </h1>
 
+        <div align="center">
+            <form>
+                Keyword (s):
+                <input type="text" name="General Search">
+                <button type="button">Search</button>
+            </form>
 
-    <h1>Search the Life Sciences Collections : </h1>
-
-    <hr>
-
-    <div class="col-md-3">
-        Collection:
-    </div>
-    <div class="col-md-3">
-        <div>
-            <input type="checkbox" id="Amphibian" />
-            <label for="Amphibian">Amphibian/Reptile</label>
-        </div>
-        <div>
-            <input type="checkbox" id="Bird" />
-            <label for="Bird">Bird</label>
-        </div>
-        <div>
-            <input type="checkbox" id="Annelid" />
-            <label for="Annelid">Annelid</label>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div>
-            <input type="checkbox" id="Crustacea" />
-            <label for="Crustacea">Crustacea</label>
-        </div>
-        <div>
-            <input type="checkbox" id="Fish" />
-            <label for="Fish">Fish</label>
-        </div>
-        <div>
-            <input type="checkbox" id="Insect" />
-            <label for="Insect">Insect</label>
         </div>
     </div>
-    <div>
-        <div>
-            <input type="checkbox" id="Invertebrate" />
-            <label for="Invertebrate">Invertebrate</label>
+
+
+
+    @*Life Sciences Tab Content*@
+
+    <div class="tab-pane" id="lifeSciences-6">
+        <h1>Search the Life Sciences Collections : </h1>
+
+        <hr>
+
+        <div class="col-md-3">
+            Collection:
+        </div>
+        <div class="col-md-3">
+            <div>
+                <input type="checkbox" id="Amphibian" />
+                <label for="Amphibian">Amphibian/Reptile</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Bird" />
+                <label for="Bird">Bird</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Annelid" />
+                <label for="Annelid">Annelid</label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div>
+                <input type="checkbox" id="Crustacea" />
+                <label for="Crustacea">Crustacea</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Fish" />
+                <label for="Fish">Fish</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Insect" />
+                <label for="Insect">Insect</label>
+            </div>
         </div>
         <div>
-            <input type="checkbox" id="Mammal" />
-            <label for="Mammal">Mammal</label>
-        </div>
-        <div>
-            <input type="checkbox" id="Mollusc" />
-            <label for="Mollusc">Mollusc</label>
-        </div>
-    </div>
-    <div align="center">
-        <form>
-            Keyword (s):
-            <input type="text" name="General Search">
-            <button type="button">Search</button>
-        </form>
-
-    </div>
-    <section class="site-content" id="skip-to-content">
-        <div class="container">
-            <div class="row">
-
-                @*<div class="col-md-9">
-                    <div class="panel-group" id="accordion">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-1">
-                                        Collapsible Group Item #1
-                                        <i class="fa fa-lg fa-angle-down pull-right"></i>
-                                        <i class="fa fa-lg fa-angle-up pull-right"></i>
-                                    </a>
-                                </h4>
-                            </div> <!-- .panel-heading -->
-                            <div id="collapse-1" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div> <!-- .panel-body -->
-                            </div> <!-- #collapse-1 -->
-                        </div> <!-- .panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-2" class="collapsed">
-                                        Collapsible Group Item #2
-                                        <i class="fa fa-lg fa-angle-down pull-right"></i>
-                                        <i class="fa fa-lg fa-angle-up pull-right"></i>
-                                    </a>
-                                </h4>
-                            </div> <!-- .panel-heading -->*@
-
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion-2" href="#collapse-2-6" class="collapsed">
-                                <i class="fa fa-fw fa-lg fa-plus"></i>
-                                <i class="fa fa-fw fa-lg fa-minus"></i>
-                                Advanced Search
-                            </a>
-                        </h4>
-                    </div> <!-- .panel-heading -->
-
-                    <div id="collapse-2-6" class="panel-primary">
-                        <div class="panel-body">
-                            <table cellpadding="5">
-                                <tr>
-                                    <th>Taxonomy:</th>
-                                    <th></th>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        Any Taxon, ID, Common Name:
-                                    </td>
-
-                                    <td>
-                                        <input type="text" name="Any Taxon, ID, Common Name">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Identification:
-                                    </td>
-                                    <td>
-                                        <input type="text" name="Identification">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Common Name:
-                                    </td>
-                                    <td>
-                                        <input type="text" name="Common Name">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Kingdom:
-                                    </td>
-                                    <td>
-                                        <select id="Kingdom">
-                                            <option value="defaultKingdom" selected disabled hidden>Select Kingdom</option>
-                                            <option value="Animalia">Animalia</option>
-                                            <option value="Fungi">Fungi</option>
-                                            <option value="Plantae">Plantae</option>
-                                            <option value="Chromista">Chromista</option>
-                                            <option value="Protozoa">Protozoa</option>
-                                            <option value="Bacteria">Bacteria</option>
-
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Phylum:
-                                    </td>
-                                    <td>
-                                        <select id="Phylum">
-                                            <option value="defaultPhylum" selected disabled hidden>Select Phylum</option>
-                                            <option value="Mollusca">Mollusca</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Class:
-                                    </td>
-                                    <td>
-                                        <select id="Class">
-                                            <option value="defaultClass" selected disabled hidden>Select Class</option>
-                                            <option value="Bivalvia">Bivalvia</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-
-                                        Order:
-                                    </td>
-                                    <td>
-                                        <select id="Order">
-                                            <option value="defaultOrder" selected disabled hidden>Select Order</option>
-                                            <option value="Unionida">Unionida</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Family:
-                                    </td>
-                                    <td>
-                                        <select id="Family">
-                                            <option value="defaultFamily" selected disabled hidden>Select Family</option>
-                                            <option value="Unionidae">Unionidae</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Subfamily:
-                                    </td>
-                                    <td>
-                                        <select id="Subfamily">
-                                            <option value="defaultSubfamily" selected disabled hidden>Select Subfamily</option>
-                                            <option value="Ambleminae">Ambleminae</option>
-                                        </select>
-                                    </td>
-                                </tr>
-
-
-                                <tr>
-                                    <td>
-                                        Tribe:
-                                    </td>
-                                    <td>
-                                        <select id="Tribe">
-                                            <option value="defaultTribe" selected disabled hidden>Tribe</option>
-
-                                        </select>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        Subtribe:
-                                    </td>
-                                    <td>
-                                        <select id="Subtribe">
-                                            <option value="defaultSubtribe" selected disabled hidden>Select Subtribe</option>
-
-
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Genus:
-                                    </td>
-                                    <td>
-                                        <select id="Genus">
-                                            <option value="defaultGenus" selected disabled hidden>Select Genus</option>
-
-
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                    <td>
-                                        Species:
-                                    </td>
-                                    <td>
-                                        <select id="Species">
-                                            <option value="defaultSpecies" selected disabled hidden>Select Species</option>
-
-
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                    <td>
-                                        Subspecies:
-                                    </td>
-                                    <td>
-                                        <select id="Subspecies">
-                                            <option value="defaultSubspecies" selected disabled hidden>Select Subspecies</option>
-
-
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                    <td>
-                                        Author:
-                                    </td>
-                                    <td>
-                                        <select id="Author">
-                                            <option value="defaultAuthor" selected disabled hidden>Select Author</option>
-
-
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                    <td>
-                                        Determiner:
-                                    </td>
-                                    <td>
-                                        <select id="Author">
-                                            <option value="defaultAuthor" selected disabled hidden>Select Author</option>
-
-
-                                        </select>
-                                    </td>
-                                    <td>
-                                        Year:
-                                    </td>
-                                    <td>
-                                        <select id="Year">
-                                            <option value="defaultYear" selected disabled hidden>Select Year</option>
-
-
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                    <td>
-                                        Check for Synonyms:
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" id="Synonyms" />
-                                        <label for="Synonyms">Synonyms</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                    <td>
-                                        Check to include Parts:
-                                    </td>
-                                    <td>
-                                        <input type="checkbox" id="Parts" />
-                                        <label for="Parts">Parts</label>
-                                    </td>
-                                </tr>
-                                <tr>
-                            </table>
-
-
-                            <hr>
-
-
-                            <table cellpadding="5">
-                                <tr>
-                                    <th>Speciman Related:</th>
-                                    <th></th>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        Any Identifier:
-                                    </td>
-                                    <td>
-                                        <input type="text" name="Any Identifier">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Catalog Number:
-                                    </td>
-
-                                    <td>
-                                        <input type="text" name="Catalog Number">
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        Accession:
-                                    </td>
-                                    <td>
-                                        <input type="text" name="Accession">
-                                    </td>
-                                </tr>
-                                <tr>
-
-                                    <td>
-                                        GUID:
-                                    </td>
-                                    <td>
-                                        <input type="text" name="GUID">
-                                    </td>
-                                <tr>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Other Identifier Type:
-                                    </td>
-                                    <td>
-                                        <input type="text" name="Other Identifier Type" />
-                                    </td>
-                                </tr>
-
-                            </table>
-                            <hr>
-
-
-                            <table cellpadding="5">
-                                <tr>
-                                    <th>
-                                        Locality:
-                                    </th>
-                                    <th>
-
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Continent / Ocean:
-                                    </td>
-
-                                    <td>
-                                        <input type="text" name="Continent / Ocean">
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        Country:
-                                    </td>
-
-                                    <td>
-                                        <select id="Country">
-                                            <option value="defaultCountry" selected disabled hidden>Select Country</option>
-
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Province/Territory/State:
-                                    </td>
-                                    <td>
-                                        <select id="State">
-                                            <option value="defaultState" selected disabled hidden>Select State/Province</option>
-
-                                        </select>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        County:
-                                    </td>
-                                    <td>
-                                        <select id="County">
-                                            <option value="defaultCounty" selected disabled hidden>Select County</option>
-
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Locality Remarks:
-                                    </td>
-
-                                    <td>
-                                        <input type="text" name="Locality Remarks">
-                                    </td>
-                                </tr>
-                            </table>
-
-
-                            <div class="col-md-3">
-                                <button type="button">Clear</button>
-                                <a href=" /SearchResults"><button type="button">Search</button></a>
-                            </div>
-
-
-
-                        </div> <!-- .panel-body -->
-                    </div> <!-- #collapse-2-6 -->
-                </div> <!-- .panel -->
+            <div>
+                <input type="checkbox" id="Invertebrate" />
+                <label for="Invertebrate">Invertebrate</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Mammal" />
+                <label for="Mammal">Mammal</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Mollusc" />
+                <label for="Mollusc">Mollusc</label>
             </div>
         </div>
 
+        <section class="site-content" id="skip-to-content">
+            <div class="container">
+                <div class="row">
+
+                    @*<div class="col-md-9">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-1">
+                                            Collapsible Group Item #1
+                                            <i class="fa fa-lg fa-angle-down pull-right"></i>
+                                            <i class="fa fa-lg fa-angle-up pull-right"></i>
+                                        </a>
+                                    </h4>
+                                </div> <!-- .panel-heading -->
+                                <div id="collapse-1" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    </div> <!-- .panel-body -->
+                                </div> <!-- #collapse-1 -->
+                            </div> <!-- .panel -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-2" class="collapsed">
+                                            Collapsible Group Item #2
+                                            <i class="fa fa-lg fa-angle-down pull-right"></i>
+                                            <i class="fa fa-lg fa-angle-up pull-right"></i>
+                                        </a>
+                                    </h4>
+                                </div> <!-- .panel-heading -->*@
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion-2" href="#collapse-2-6" class="collapsed">
+                                    <i class="fa fa-fw fa-lg fa-plus"></i>
+                                    <i class="fa fa-fw fa-lg fa-minus"></i>
+                                    Advanced Search
+                                </a>
+                            </h4>
+                        </div> <!-- .panel-heading -->
+
+                        <div id="collapse-2-6" class="panel-primary">
+                            <div class="panel-body">
+                                <table cellpadding="5">
+                                    <tr>
+                                        <th>Taxonomy:</th>
+                                        <th></th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Any Taxon, ID, Common Name:
+                                        </td>
+
+                                        <td>
+                                            <input type="text" name="Any Taxon, ID, Common Name">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Identification:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Identification">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Common Name:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Common Name">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Kingdom:
+                                        </td>
+                                        <td>
+                                            <select id="Kingdom">
+                                                <option value="defaultKingdom" selected disabled hidden>Select Kingdom</option>
+                                                <option value="Animalia">Animalia</option>
+                                                <option value="Fungi">Fungi</option>
+                                                <option value="Plantae">Plantae</option>
+                                                <option value="Chromista">Chromista</option>
+                                                <option value="Protozoa">Protozoa</option>
+                                                <option value="Bacteria">Bacteria</option>
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Phylum:
+                                        </td>
+                                        <td>
+                                            <select id="Phylum">
+                                                <option value="defaultPhylum" selected disabled hidden>Select Phylum</option>
+                                                <option value="Mollusca">Mollusca</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Class:
+                                        </td>
+                                        <td>
+                                            <select id="Class">
+                                                <option value="defaultClass" selected disabled hidden>Select Class</option>
+                                                <option value="Bivalvia">Bivalvia</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                            Order:
+                                        </td>
+                                        <td>
+                                            <select id="Order">
+                                                <option value="defaultOrder" selected disabled hidden>Select Order</option>
+                                                <option value="Unionida">Unionida</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Family:
+                                        </td>
+                                        <td>
+                                            <select id="Family">
+                                                <option value="defaultFamily" selected disabled hidden>Select Family</option>
+                                                <option value="Unionidae">Unionidae</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Subfamily:
+                                        </td>
+                                        <td>
+                                            <select id="Subfamily">
+                                                <option value="defaultSubfamily" selected disabled hidden>Select Subfamily</option>
+                                                <option value="Ambleminae">Ambleminae</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            Tribe:
+                                        </td>
+                                        <td>
+                                            <select id="Tribe">
+                                                <option value="defaultTribe" selected disabled hidden>Tribe</option>
+
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Subtribe:
+                                        </td>
+                                        <td>
+                                            <select id="Subtribe">
+                                                <option value="defaultSubtribe" selected disabled hidden>Select Subtribe</option>
+
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Genus:
+                                        </td>
+                                        <td>
+                                            <select id="Genus">
+                                                <option value="defaultGenus" selected disabled hidden>Select Genus</option>
+
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>
+                                            Species:
+                                        </td>
+                                        <td>
+                                            <select id="Species">
+                                                <option value="defaultSpecies" selected disabled hidden>Select Species</option>
+
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>
+                                            Subspecies:
+                                        </td>
+                                        <td>
+                                            <select id="Subspecies">
+                                                <option value="defaultSubspecies" selected disabled hidden>Select Subspecies</option>
+
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>
+                                            Author:
+                                        </td>
+                                        <td>
+                                            <select id="Author">
+                                                <option value="defaultAuthor" selected disabled hidden>Select Author</option>
+
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>
+                                            Determiner:
+                                        </td>
+                                        <td>
+                                            <select id="Author">
+                                                <option value="defaultAuthor" selected disabled hidden>Select Author</option>
+
+
+                                            </select>
+                                        </td>
+                                        <td>
+                                            Year:
+                                        </td>
+                                        <td>
+                                            <select id="Year">
+                                                <option value="defaultYear" selected disabled hidden>Select Year</option>
+
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>
+                                            Check for Synonyms:
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="Synonyms" />
+                                            <label for="Synonyms">Synonyms</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>
+                                            Check to include Parts:
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="Parts" />
+                                            <label for="Parts">Parts</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                </table>
+
+
+                                <hr>
+
+
+                                <table cellpadding="5">
+                                    <tr>
+                                        <th>Speciman Related:</th>
+                                        <th></th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Any Identifier:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Any Identifier">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Catalog Number:
+                                        </td>
+
+                                        <td>
+                                            <input type="text" name="Catalog Number">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Accession:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Accession">
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            GUID:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="GUID">
+                                        </td>
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Other Identifier Type:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Other Identifier Type" />
+                                        </td>
+                                    </tr>
+
+                                </table>
+                                <hr>
+
+
+                                <table cellpadding="5">
+                                    <tr>
+                                        <th>
+                                            Locality:
+                                        </th>
+                                        <th>
+
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Continent / Ocean:
+                                        </td>
+
+                                        <td>
+                                            <input type="text" name="Continent / Ocean">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Country:
+                                        </td>
+
+                                        <td>
+                                            <select id="Country">
+                                                <option value="defaultCountry" selected disabled hidden>Select Country</option>
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Province/Territory/State:
+                                        </td>
+                                        <td>
+                                            <select id="State">
+                                                <option value="defaultState" selected disabled hidden>Select State/Province</option>
+
+                                            </select>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            County:
+                                        </td>
+                                        <td>
+                                            <select id="County">
+                                                <option value="defaultCounty" selected disabled hidden>Select County</option>
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Locality Remarks:
+                                        </td>
+
+                                        <td>
+                                            <input type="text" name="Locality Remarks">
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                                <div class="col-md-3">
+                                    <button type="button">Clear</button>
+                                    @*<a href=" /SearchResults"><button type="button">Search</button></a>*@
+                                    <a href=" /SearchResults"></a><button type="button">Search</button>
+                                </div>
+
+
+
+                            </div> <!-- .panel-body -->
+                        </div> <!-- #collapse-2-6 -->
+                    </div> <!-- .panel -->
+                </div>
+            </div>
+        </section>
+    </div>
+    @*End of lifesciences Tab*@
+
+    @*Beginning of Earth Sciences Tab*@
+    <div class="tab-pane" id="earthSciences-6">
+        <h1>Search the Earth Sciences Collections : </h1>
+
+        <hr>
+        <div style="padding-bottom:60px">
+            <div class="col-md-3">
+                Collection:
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <input type="checkbox" id="Invertebrates" />
+                    <label for="Invertebrates">Invertebrates</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Botany" />
+                    <label for="Botany">Botany</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <input type="checkbox" id="Vetebrates" />
+                    <label for="Vetebrates">Vetebrates</label>
+                </div>
+
+
+                <div>
+                    <input type="checkbox" id="MicroFossils" />
+                    <label for="MicroFossils">MicroFossils</label>
+                </div>
+            </div>
+        </div>
+
+        <section class="site-content" id="skip-to-content">
+            <div class="container">
+                <div class="row">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion-2" href="#collapse-2-6" class="collapsed">
+                                    <i class="fa fa-fw fa-lg fa-plus"></i>
+                                    <i class="fa fa-fw fa-lg fa-minus"></i>
+                                    Advanced Search
+                                </a>
+                            </h4>
+                        </div> <!-- .panel-heading -->
+
+                        <div id="collapse-2-6" class="panel-primary">
+                            <div class="panel-body">
+                                <table cellpadding="5">
+                                    <tr>
+                                        <th>Taxonomy:</th>
+                                        <th></th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Any Taxon, ID, Common Name:
+                                        </td>
+
+                                        <td>
+                                            <input type="text" name="Any Taxon, ID, Common Name">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Identification:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Identification">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Common Name:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Common Name">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Kingdom:
+                                        </td>
+                                        <td>
+                                            <select id="Kingdom">
+                                                <option value="defaultKingdom" selected disabled hidden>Select Kingdom</option>
+                                                <option value="Animalia">Animalia</option>
+                                                <option value="Fungi">Fungi</option>
+                                                <option value="Plantae">Plantae</option>
+                                                <option value="Chromista">Chromista</option>
+                                                <option value="Protozoa">Protozoa</option>
+                                                <option value="Bacteria">Bacteria</option>
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Phylum:
+                                        </td>
+                                        <td>
+                                            <select id="Phylum">
+                                                <option value="defaultPhylum" selected disabled hidden>Select Phylum</option>
+                                                <option value="Mollusca">Mollusca</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Class:
+                                        </td>
+                                        <td>
+                                            <select id="Class">
+                                                <option value="defaultClass" selected disabled hidden>Select Class</option>
+                                                <option value="Bivalvia">Bivalvia</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                            Order:
+                                        </td>
+                                        <td>
+                                            <select id="Order">
+                                                <option value="defaultOrder" selected disabled hidden>Select Order</option>
+                                                <option value="Unionida">Unionida</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Family:
+                                        </td>
+                                        <td>
+                                            <select id="Family">
+                                                <option value="defaultFamily" selected disabled hidden>Select Family</option>
+                                                <option value="Unionidae">Unionidae</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Subfamily:
+                                        </td>
+                                        <td>
+                                            <select id="Subfamily">
+                                                <option value="defaultSubfamily" selected disabled hidden>Select Subfamily</option>
+                                                <option value="Ambleminae">Ambleminae</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>
+                                            Tribe:
+                                        </td>
+                                        <td>
+                                            <select id="Tribe">
+                                                <option value="defaultTribe" selected disabled hidden>Tribe</option>
+
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Subtribe:
+                                        </td>
+                                        <td>
+                                            <select id="Subtribe">
+                                                <option value="defaultSubtribe" selected disabled hidden>Select Subtribe</option>
+
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Genus:
+                                        </td>
+                                        <td>
+                                            <select id="Genus">
+                                                <option value="defaultGenus" selected disabled hidden>Select Genus</option>
+
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>
+                                            Species:
+                                        </td>
+                                        <td>
+                                            <select id="Species">
+                                                <option value="defaultSpecies" selected disabled hidden>Select Species</option>
+
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>
+                                            Subspecies:
+                                        </td>
+                                        <td>
+                                            <select id="Subspecies">
+                                                <option value="defaultSubspecies" selected disabled hidden>Select Subspecies</option>
+
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>
+                                            Author:
+                                        </td>
+                                        <td>
+                                            <select id="Author">
+                                                <option value="defaultAuthor" selected disabled hidden>Select Author</option>
+
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>
+                                            Determiner:
+                                        </td>
+                                        <td>
+                                            <select id="Author">
+                                                <option value="defaultAuthor" selected disabled hidden>Select Author</option>
+
+
+                                            </select>
+                                        </td>
+                                        <td>
+                                            Year:
+                                        </td>
+                                        <td>
+                                            <select id="Year">
+                                                <option value="defaultYear" selected disabled hidden>Select Year</option>
+
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>
+                                            Check for Synonyms:
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="Synonyms" />
+                                            <label for="Synonyms">Synonyms</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td>
+                                            Check to include Parts:
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="Parts" />
+                                            <label for="Parts">Parts</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                </table>
+
+                                <hr>
+                                @*Geology Attribute would benefit from splitting up into 2 parts*@
+                                @*First Part Age*@
+
+                                <table cellpadding="5">
+                                    <tr>
+                                        <th>Age:</th>
+                                        <th></th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Era/Erathem:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Era/Erathem">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            System/Period:
+                                        </td>
+
+                                        <td>
+                                            <input type="text" name="System/Period">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Series/Epoch:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Series/Epoch">
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Stage/Age:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Stage/Age">
+                                        </td>
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Other Identifier Type:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Other Identifier Type" />
+                                        </td>
+                                    </tr>
+
+                                </table>
+                                <hr>
+
+
+                                @*Geology Attribute would benefit from splitting up into 2 parts*@
+                                @*Second Part Rock Unit*@
+
+                                <table cellpadding="5">
+                                    <tr>
+                                        <th>Rock Unit:</th>
+                                        <th></th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Group:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Group">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Formation:
+                                        </td>
+
+                                        <td>
+                                            <input type="text" name="Formation">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Member:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Member">
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            Bed:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Bed">
+                                        </td>
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Other Identifier Type:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Other Identifier Type" />
+                                        </td>
+                                    </tr>
+
+                                </table>
+                                <hr>
+
+
+
+
+
+                                <table cellpadding="5">
+                                    <tr>
+                                        <th>Speciman Related:</th>
+                                        <th></th>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Any Identifier:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Any Identifier">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Catalog Number:
+                                        </td>
+
+                                        <td>
+                                            <input type="text" name="Catalog Number">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Accession:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Accession">
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                        <td>
+                                            GUID:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="GUID">
+                                        </td>
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Other Identifier Type:
+                                        </td>
+                                        <td>
+                                            <input type="text" name="Other Identifier Type" />
+                                        </td>
+                                    </tr>
+
+                                </table>
+                                <hr>
+
+
+                                <table cellpadding="5">
+                                    <tr>
+                                        <th>
+                                            Locality:
+                                        </th>
+                                        <th>
+
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Continent / Ocean:
+                                        </td>
+
+                                        <td>
+                                            <input type="text" name="Continent / Ocean">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            Country:
+                                        </td>
+
+                                        <td>
+                                            <select id="Country">
+                                                <option value="defaultCountry" selected disabled hidden>Select Country</option>
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Province/Territory/State:
+                                        </td>
+                                        <td>
+                                            <select id="State">
+                                                <option value="defaultState" selected disabled hidden>Select State/Province</option>
+
+                                            </select>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            County:
+                                        </td>
+                                        <td>
+                                            <select id="County">
+                                                <option value="defaultCounty" selected disabled hidden>Select County</option>
+
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Locality Remarks:
+                                        </td>
+
+                                        <td>
+                                            <input type="text" name="Locality Remarks">
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                                <div class="col-md-3">
+                                    <button type="button">Clear</button>
+                                    <a href=" /SearchResults"><button type="button">Search</button></a>
+                                </div>
+
+
+
+                            </div> <!-- .panel-body -->
+                        </div> <!-- #collapse-2-6 -->
+                    </div> <!-- .panel -->
+                </div>
+            </div>
+        </section>
+    </div>
+    @*End of Earth Sciences Tab*@
+    @*Beginning of Ethnology and Culture Tabs*@
+
+
+
+        <div class="tab-pane" id="#culture-6">
+            <h1>Search the Culture and Ethnology Collections : </h1>
+
+            <hr>
+
+            <div class="col-md-3">
+                Collection:
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <input type="checkbox" id="Amphibian" />
+                    <label for="Amphibian">Amphibian/Reptile</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Bird" />
+                    <label for="Bird">Bird</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Annelid" />
+                    <label for="Annelid">Annelid</label>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <input type="checkbox" id="Crustacea" />
+                    <label for="Crustacea">Crustacea</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Fish" />
+                    <label for="Fish">Fish</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Insect" />
+                    <label for="Insect">Insect</label>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="checkbox" id="Invertebrate" />
+                    <label for="Invertebrate">Invertebrate</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Mammal" />
+                    <label for="Mammal">Mammal</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Mollusc" />
+                    <label for="Mollusc">Mollusc</label>
+                </div>
+            </div>
+
+            <section class="site-content" id="skip-to-content">
+                <div class="container">
+                    <div class="row">
+
+                        @*<div class="col-md-9">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-1">
+                                                Collapsible Group Item #1
+                                                <i class="fa fa-lg fa-angle-down pull-right"></i>
+                                                <i class="fa fa-lg fa-angle-up pull-right"></i>
+                                            </a>
+                                        </h4>
+                                    </div> <!-- .panel-heading -->
+                                    <div id="collapse-1" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </div> <!-- .panel-body -->
+                                    </div> <!-- #collapse-1 -->
+                                </div> <!-- .panel -->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-2" class="collapsed">
+                                                Collapsible Group Item #2
+                                                <i class="fa fa-lg fa-angle-down pull-right"></i>
+                                                <i class="fa fa-lg fa-angle-up pull-right"></i>
+                                            </a>
+                                        </h4>
+                                    </div> <!-- .panel-heading -->*@
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion-2" href="#collapse-2-6" class="collapsed">
+                                        <i class="fa fa-fw fa-lg fa-plus"></i>
+                                        <i class="fa fa-fw fa-lg fa-minus"></i>
+                                        Advanced Search
+                                    </a>
+                                </h4>
+                            </div> <!-- .panel-heading -->
+
+                            <div id="collapse-2-6" class="panel-primary">
+                                <div class="panel-body">
+                                    <table cellpadding="5">
+                                        <tr>
+                                            <th>Taxonomy:</th>
+                                            <th></th>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                Any Taxon, ID, Common Name:
+                                            </td>
+
+                                            <td>
+                                                <input type="text" name="Any Taxon, ID, Common Name">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Identification:
+                                            </td>
+                                            <td>
+                                                <input type="text" name="Identification">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Common Name:
+                                            </td>
+                                            <td>
+                                                <input type="text" name="Common Name">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Kingdom:
+                                            </td>
+                                            <td>
+                                                <select id="Kingdom">
+                                                    <option value="defaultKingdom" selected disabled hidden>Select Kingdom</option>
+                                                    <option value="Animalia">Animalia</option>
+                                                    <option value="Fungi">Fungi</option>
+                                                    <option value="Plantae">Plantae</option>
+                                                    <option value="Chromista">Chromista</option>
+                                                    <option value="Protozoa">Protozoa</option>
+                                                    <option value="Bacteria">Bacteria</option>
+
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Phylum:
+                                            </td>
+                                            <td>
+                                                <select id="Phylum">
+                                                    <option value="defaultPhylum" selected disabled hidden>Select Phylum</option>
+                                                    <option value="Mollusca">Mollusca</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Class:
+                                            </td>
+                                            <td>
+                                                <select id="Class">
+                                                    <option value="defaultClass" selected disabled hidden>Select Class</option>
+                                                    <option value="Bivalvia">Bivalvia</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+
+                                                Order:
+                                            </td>
+                                            <td>
+                                                <select id="Order">
+                                                    <option value="defaultOrder" selected disabled hidden>Select Order</option>
+                                                    <option value="Unionida">Unionida</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Family:
+                                            </td>
+                                            <td>
+                                                <select id="Family">
+                                                    <option value="defaultFamily" selected disabled hidden>Select Family</option>
+                                                    <option value="Unionidae">Unionidae</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Subfamily:
+                                            </td>
+                                            <td>
+                                                <select id="Subfamily">
+                                                    <option value="defaultSubfamily" selected disabled hidden>Select Subfamily</option>
+                                                    <option value="Ambleminae">Ambleminae</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>
+                                                Tribe:
+                                            </td>
+                                            <td>
+                                                <select id="Tribe">
+                                                    <option value="defaultTribe" selected disabled hidden>Tribe</option>
+
+                                                </select>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                Subtribe:
+                                            </td>
+                                            <td>
+                                                <select id="Subtribe">
+                                                    <option value="defaultSubtribe" selected disabled hidden>Select Subtribe</option>
+
+
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Genus:
+                                            </td>
+                                            <td>
+                                                <select id="Genus">
+                                                    <option value="defaultGenus" selected disabled hidden>Select Genus</option>
+
+
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <tr>
+                                            <td>
+                                                Species:
+                                            </td>
+                                            <td>
+                                                <select id="Species">
+                                                    <option value="defaultSpecies" selected disabled hidden>Select Species</option>
+
+
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <tr>
+                                            <td>
+                                                Subspecies:
+                                            </td>
+                                            <td>
+                                                <select id="Subspecies">
+                                                    <option value="defaultSubspecies" selected disabled hidden>Select Subspecies</option>
+
+
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <tr>
+                                            <td>
+                                                Author:
+                                            </td>
+                                            <td>
+                                                <select id="Author">
+                                                    <option value="defaultAuthor" selected disabled hidden>Select Author</option>
+
+
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <tr>
+                                            <td>
+                                                Determiner:
+                                            </td>
+                                            <td>
+                                                <select id="Author">
+                                                    <option value="defaultAuthor" selected disabled hidden>Select Author</option>
+
+
+                                                </select>
+                                            </td>
+                                            <td>
+                                                Year:
+                                            </td>
+                                            <td>
+                                                <select id="Year">
+                                                    <option value="defaultYear" selected disabled hidden>Select Year</option>
+
+
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <tr>
+                                            <td>
+                                                Check for Synonyms:
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="Synonyms" />
+                                                <label for="Synonyms">Synonyms</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                        <tr>
+                                            <td>
+                                                Check to include Parts:
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" id="Parts" />
+                                                <label for="Parts">Parts</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                    </table>
+
+
+                                    <hr>
+
+
+                                    <table cellpadding="5">
+                                        <tr>
+                                            <th>Speciman Related:</th>
+                                            <th></th>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                Any Identifier:
+                                            </td>
+                                            <td>
+                                                <input type="text" name="Any Identifier">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Catalog Number:
+                                            </td>
+
+                                            <td>
+                                                <input type="text" name="Catalog Number">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                Accession:
+                                            </td>
+                                            <td>
+                                                <input type="text" name="Accession">
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>
+                                                GUID:
+                                            </td>
+                                            <td>
+                                                <input type="text" name="GUID">
+                                            </td>
+                                        <tr>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Other Identifier Type:
+                                            </td>
+                                            <td>
+                                                <input type="text" name="Other Identifier Type" />
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                    <hr>
+
+
+                                    <table cellpadding="5">
+                                        <tr>
+                                            <th>
+                                                Locality:
+                                            </th>
+                                            <th>
+
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Continent / Ocean:
+                                            </td>
+
+                                            <td>
+                                                <input type="text" name="Continent / Ocean">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                Country:
+                                            </td>
+
+                                            <td>
+                                                <select id="Country">
+                                                    <option value="defaultCountry" selected disabled hidden>Select Country</option>
+
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Province/Territory/State:
+                                            </td>
+                                            <td>
+                                                <select id="State">
+                                                    <option value="defaultState" selected disabled hidden>Select State/Province</option>
+
+                                                </select>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                County:
+                                            </td>
+                                            <td>
+                                                <select id="County">
+                                                    <option value="defaultCounty" selected disabled hidden>Select County</option>
+
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Locality Remarks:
+                                            </td>
+
+                                            <td>
+                                                <input type="text" name="Locality Remarks">
+                                            </td>
+                                        </tr>
+                                    </table>
+
+
+                                    <div class="col-md-3">
+                                        <button type="button">Clear</button>
+                                        @*<a href=" /SearchResults"><button type="button">Search</button></a>*@
+                                        <a href=" /SearchResults"></a><button type="button">Search</button>
+                                    </div>
+
+
+
+                                </div> <!-- .panel-body -->
+                            </div> <!-- #collapse-2-6 -->
+                        </div> <!-- .panel -->
+                    </div>
+                </div>
+            </section>
+        </div>
+        @*End of Ethnology Tab*@
+    </div>
+
     </section>
+    @*Scripts for the accordian*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/chart.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="../../js/gmaps.min.js"></script>
+    <script src="../../js/magnific-popup.min.js"></script>
+    <script src="../../js/masonry.min.js"></script>
+    <script src="../../js/imagesLoaded.min.js"></script>
+    <script src="../../js/dataTables.min.js"></script>
+    <script src="../../js/dataTables.bootstrap.min.js"></script>
+    <script src="../../js/scripts.min.js"></script>
+
+    @*Scripts for the Tabs*@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
     <script src="../js/prism.min.js"></script>
