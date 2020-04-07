@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Capstone_Museum/1.0.0": {
         "dependencies": {
+          "CsvHelper": "15.0.1",
           "Json.Net": "1.0.18",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.1",
           "Newtonsoft.Json": "12.0.3",
@@ -105,7 +106,7 @@
           "Microsoft.AspNetCore.StaticFiles": "3.1.0.0",
           "Microsoft.AspNetCore.WebSockets": "3.1.0.0",
           "Microsoft.AspNetCore.WebUtilities": "3.1.0.0",
-          "Microsoft.CSharp": "4.0.0.0",
+          "Microsoft.CSharp.Reference": "4.0.0.0",
           "Microsoft.Extensions.Caching.Abstractions": "3.1.0.0",
           "Microsoft.Extensions.Caching.Memory": "3.1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.0.0",
@@ -316,6 +317,20 @@
         },
         "compile": {
           "Capstone_Museum.dll": {}
+        }
+      },
+      "CsvHelper/15.0.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/CsvHelper.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/CsvHelper.dll": {}
         }
       },
       "Json.Net/1.0.18": {
@@ -602,6 +617,7 @@
           "lib/netstandard2.0/Microsoft.CodeAnalysis.Workspaces.dll": {}
         }
       },
+      "Microsoft.CSharp/4.5.0": {},
       "Microsoft.Extensions.DependencyInjection/3.1.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.0"
@@ -2011,7 +2027,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.CSharp/4.0.0.0": {
+      "Microsoft.CSharp.Reference/4.0.0.0": {
         "compile": {
           "Microsoft.CSharp.dll": {}
         },
@@ -3249,6 +3265,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "CsvHelper/15.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cp8HCY1PWddLy8tllAOv7T8We67fg/7B40JiBaTLM252FQDVA0XvrmfVeqHDJBGbnXwyakpnAd8F2ELDZb8ZxQ==",
+      "path": "csvhelper/15.0.1",
+      "hashPath": "csvhelper.15.0.1.nupkg.sha512"
+    },
     "Json.Net/1.0.18": {
       "type": "package",
       "serviceable": true,
@@ -3325,6 +3348,13 @@
       "sha512": "sha512-NfBz3b5hFSbO+7xsCNryD+p8axsIJFTG7qM3jvMTC/MqYrU6b8E1b6JoRj5rJSOBB+pSunk+CMqyGQTOWHeDUg==",
       "path": "microsoft.codeanalysis.workspaces.common/3.3.1",
       "hashPath": "microsoft.codeanalysis.workspaces.common.3.3.1.nupkg.sha512"
+    },
+    "Microsoft.CSharp/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "path": "microsoft.csharp/4.5.0",
+      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
     },
     "Microsoft.Extensions.DependencyInjection/3.1.0": {
       "type": "package",
@@ -4390,7 +4420,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.CSharp/4.0.0.0": {
+    "Microsoft.CSharp.Reference/4.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

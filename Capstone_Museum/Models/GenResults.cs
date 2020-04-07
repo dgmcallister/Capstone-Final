@@ -32,6 +32,7 @@ namespace Capstone_Museum.Models
             public string Remarks { get; set; }
             public decimal mapLat { get; set; }
             public decimal mapLong { get; set; }
+            public string csvURL { get; set; }
 
         }
         public class RootObject
