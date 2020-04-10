@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Json.Net/1.0.18": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Json.Net.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Json.Net.dll": {}
-        }
-      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1810,18 +1801,6 @@
     }
   },
   "libraries": {
-    "Json.Net/1.0.18": {
-      "sha512": "LeHX1l1FbTeg5C6rvx19qE/OLrPM7ggmlMBJgu08bcMn9anbE0SEF3BXwhUrio8/f0445XJnAaE5gmhqRCEuzw==",
-      "type": "package",
-      "path": "json.net/1.0.18",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "json.net.1.0.18.nupkg.sha512",
-        "json.net.nuspec",
-        "lib/netstandard2.0/Json.Net.dll"
-      ]
-    },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
       "sha512": "Y4rs5aMEXY8G7wJo5S3EEt6ltqyOTr/qOeZzfn+hw/fuQj5GppGckMY5psGLETo1U9hcT5MmAhaT5xtusM1b5g==",
       "type": "package",
@@ -6045,26 +6024,29 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Json.Net >= 1.0.18",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1",
       "Newtonsoft.Json >= 12.0.3",
       "System.Net.Http >= 4.3.4"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HAdams20\\.nuget\\packages\\": {}
+    "C:\\Users\\wajaa\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HAdams20\\source\\repos\\Capstone_Museum\\Capstone_Museum\\Capstone_Museum.csproj",
+      "projectUniqueName": "C:\\Users\\wajaa\\Source\\Repos\\CFinal\\Capstone_Museum\\Capstone_Museum.csproj",
       "projectName": "Capstone_Museum",
-      "projectPath": "C:\\Users\\HAdams20\\source\\repos\\Capstone_Museum\\Capstone_Museum\\Capstone_Museum.csproj",
-      "packagesPath": "C:\\Users\\HAdams20\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HAdams20\\source\\repos\\Capstone_Museum\\Capstone_Museum\\obj\\",
+      "projectPath": "C:\\Users\\wajaa\\Source\\Repos\\CFinal\\Capstone_Museum\\Capstone_Museum.csproj",
+      "packagesPath": "C:\\Users\\wajaa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\wajaa\\Source\\Repos\\CFinal\\Capstone_Museum\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\HAdams20\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wajaa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6088,10 +6070,6 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
-          "Json.Net": {
-            "target": "Package",
-            "version": "[1.0.18, )"
-          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.1, )"
