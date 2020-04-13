@@ -1,5 +1,4 @@
-﻿
-
+﻿@model IList<Capstone_Museum.Models.SearchModel>
 @{
     ViewData["Title"] = "Search";
 }
@@ -44,6 +43,7 @@
     @*General Search Tab*@
 
     <div class="tab-content">
+
         <div class="row">
             <div class="col-md-12">
                 <div class="content-box box-img bg-light no-top-spacing">
@@ -52,10 +52,12 @@
                             <div class="box-body margin-top-60">
                                 <h1>General Search: </h1>
                                 <div align="center">
+
+
                                     <form>
                                         Keyword (s):
                                         <input type="text" name="General Search">
-                                        <button type="button">Search</button>
+                                        <input type="submit" value="Search" />
                                     </form>
 
                                 </div>
@@ -71,427 +73,419 @@
         </div> <!-- .row -->
         <div class="tab-pane active" id="generalSearch-6">
             @*<h1>General Search: </h1>
-
-            <div align="center">
-                <form>
-                    Keyword (s):
-                    <input type="text" name="General Search">
-                    <button type="button">Search</button>
-                </form>
-
-            </div>*@
+                <div align="center">
+                    <form>
+                        Keyword (s):
+                        <input type="text" name="General Search">
+                        <button type="button">Search</button>
+                    </form>
+                </div>*@
         </div>
         @*Life Sciences Tab Content*@
+        @using (Html.BeginForm("Index", "SearchResults", FormMethod.Get))
+        {
+            <div class="tab-pane" id="lifeSciences-6">
+                <h1>Search the Life Sciences Collections : </h1>
 
-        <div class="tab-pane" id="lifeSciences-6">
-            <h1>Search the Life Sciences Collections : </h1>
+                <hr>
 
-            <hr>
-
-            <div class="col-md-3">
-                Collection:
-            </div>
-            <div class="col-md-3">
-                <div>
-                    <input type="checkbox" id="Amphibian" />
-                    <label for="Amphibian">Amphibian/Reptile</label>
+                <div class="col-md-3">
+                    Collection:
                 </div>
-                <div>
-                    <input type="checkbox" id="Bird" />
-                    <label for="Bird">Bird</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="Annelid" />
-                    <label for="Annelid">Annelid</label>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div>
-                    <input type="checkbox" id="Crustacea" />
-                    <label for="Crustacea">Crustacea</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="Fish" />
-                    <label for="Fish">Fish</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="Insect" />
-                    <label for="Insect">Insect</label>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <input type="checkbox" id="Invertebrate" />
-                    <label for="Invertebrate">Invertebrate</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="Mammal" />
-                    <label for="Mammal">Mammal</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="Mollusc" />
-                    <label for="Mollusc">Mollusc</label>
-                </div>
-            </div>
-
-            <section class="site-content" id="skip-to-content">
-                <div class="container">
-                    <div class="row">
-
-                        @*<div class="col-md-9">
-                            <div class="panel-group" id="accordion">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-1">
-                                                Collapsible Group Item #1
-                                                <i class="fa fa-lg fa-angle-down pull-right"></i>
-                                                <i class="fa fa-lg fa-angle-up pull-right"></i>
-                                            </a>
-                                        </h4>
-                                    </div> <!-- .panel-heading -->
-                                    <div id="collapse-1" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                        </div> <!-- .panel-body -->
-                                    </div> <!-- #collapse-1 -->
-                                </div> <!-- .panel -->
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-2" class="collapsed">
-                                                Collapsible Group Item #2
-                                                <i class="fa fa-lg fa-angle-down pull-right"></i>
-                                                <i class="fa fa-lg fa-angle-up pull-right"></i>
-                                            </a>
-                                        </h4>
-                                    </div> <!-- .panel-heading -->*@
-
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-2" href="#collapse-2-6" class="collapsed">
-                                        <i class="fa fa-fw fa-lg fa-plus"></i>
-                                        <i class="fa fa-fw fa-lg fa-minus"></i>
-                                        Advanced Search
-                                    </a>
-                                </h4>
-                            </div> <!-- .panel-heading -->
-
-                            <div id="collapse-2-6" class="panel-primary">
-                                <div class="panel-body">
-                                    <table cellpadding="5">
-                                        <tr>
-                                            <th>Taxonomy:</th>
-                                            <th></th>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Any Taxon, ID, Common Name:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Any Taxon, ID, Common Name">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Identification:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Identification">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Common Name:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Common Name">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Kingdom:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Kingdom">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Phylum:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Phylum">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Class:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Class">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-
-                                                Order:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Order">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Family:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Family">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Subfamily:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Subfamily">
-                                            </td>
-                                        </tr>
-
-
-                                        <tr>
-                                            <td>
-                                                Tribe:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Tribe">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Subtribe:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Subtribe">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Genus:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Genus">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Species:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Species">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Subspecies:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Subspecies">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Author:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Author">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Determiner:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Determiner">
-                                            </td>
-                                            <td>
-                                                Year:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Year">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Check for Synonyms:
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Synonyms" />
-                                                <label for="Synonyms">Synonyms</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Check to include Parts:
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Parts" />
-                                                <label for="Parts">Parts</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                    </table>
-
-
-                                    <hr>
-
-
-                                    <table cellpadding="5">
-                                        <tr>
-                                            <th>Speciman Related:</th>
-                                            <th></th>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Any Identifier:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Any Identifier">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Catalog Number:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Catalog Number">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Accession:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Accession">
-                                            </td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>
-                                                GUID:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="GUID">
-                                            </td>
-                                        <tr>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Other Identifier Type:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Other Identifier Type" />
-                                            </td>
-                                        </tr>
-
-                                    </table>
-                                    <hr>
-
-
-                                    <table cellpadding="5">
-                                        <tr>
-                                            <th>
-                                                Locality:
-                                            </th>
-                                            <th>
-
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Continent / Ocean:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Continent / Ocean">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Country:
-                                            </td>
-
-                                            <td>
-                                                <select id="Country">
-                                                    <option value="defaultCountry" selected disabled hidden>Select Country</option>
-
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Province/Territory/State:
-                                            </td>
-                                            <td>
-                                                <select id="State">
-                                                    <option value="defaultState" selected disabled hidden>Select State/Province</option>
-
-                                                </select>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                County:
-                                            </td>
-                                            <td>
-                                                <select id="County">
-                                                    <option value="defaultCounty" selected disabled hidden>Select County</option>
-
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Locality Remarks:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Locality Remarks">
-                                            </td>
-                                        </tr>
-                                    </table>
-
-
-                                    <div class="col-md-3">
-                                        <button type="button">Clear</button>
-                                        @*<a href=" /SearchResults"><button type="button">Search</button></a>*@
-                                        <a href=" /SearchResults"></a><button type="button">Search</button>
-                                    </div>
-
-
-
-                                </div> <!-- .panel-body -->
-                            </div> <!-- #collapse-2-6 -->
-                        </div> <!-- .panel -->
+                <div class="col-md-3">
+                    <div>
+                        @Html.CheckBox("Amphibian")
+                        <label for="Amphibian">Amphibian/Reptile</label>
+                    </div>
+                    <div>
+                        @Html.CheckBox("bird")
+                        <label for="Bird">Bird</label>
+                    </div>
+                    <div>
+                        @Html.CheckBox("annelid")
+                        <label for="Annelid">Annelid</label>
                     </div>
                 </div>
-            </section>
-        </div>
+                <div class="col-md-3">
+                    <div>
+                        @Html.CheckBox("crustacea")
+                        <label for="Crustacea">Crustacea</label>
+                    </div>
+                    <div>
+                        @Html.CheckBox("fish")
+                        <label for="Fish">Fish</label>
+                    </div>
+                    <div>
+                        @Html.CheckBox("insect")
+                        <label for="Insect">Insect</label>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        @Html.CheckBox("invertebrate")
+                        <label for="Invertebrate">Invertebrate</label>
+                    </div>
+                    <div>
+                        @Html.CheckBox("mammal")
+                        <label for="Mammal">Mammal</label>
+                    </div>
+                    <div>
+                        @Html.CheckBox("mollusc")
+                        <label for="Mollusc">Mollusc</label>
+                    </div>
+                </div>
+
+                <section class="site-content" id="skip-to-content">
+                    <div class="container">
+                        <div class="row">
+
+                            @*<div class="col-md-9">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-1">
+                                                    Collapsible Group Item #1
+                                                    <i class="fa fa-lg fa-angle-down pull-right"></i>
+                                                    <i class="fa fa-lg fa-angle-up pull-right"></i>
+                                                </a>
+                                            </h4>
+                                        </div> <!-- .panel-heading -->
+                                        <div id="collapse-1" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div> <!-- .panel-body -->
+                                        </div> <!-- #collapse-1 -->
+                                    </div> <!-- .panel -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-2" class="collapsed">
+                                                    Collapsible Group Item #2
+                                                    <i class="fa fa-lg fa-angle-down pull-right"></i>
+                                                    <i class="fa fa-lg fa-angle-up pull-right"></i>
+                                                </a>
+                                            </h4>
+                                        </div> <!-- .panel-heading -->*@
+
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-2" href="#collapse-2-6" class="collapsed">
+                                            <i class="fa fa-fw fa-lg fa-plus"></i>
+                                            <i class="fa fa-fw fa-lg fa-minus"></i>
+                                            Advanced Search
+                                        </a>
+                                    </h4>
+                                </div> <!-- .panel-heading -->
+
+                                <div id="collapse-2-6" class="panel-primary">
+                                    <div class="panel-body">
+                                        <table cellpadding="5">
+                                            <tr>
+                                                <th>Taxonomy:</th>
+                                                <th></th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Any Taxon, ID, Common Name:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("anyTax")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Identification:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Identification")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Common Name:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("commonName")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Kingdom:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Kingdom")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Phylum:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Phylum")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Class:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Class")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+                                                    Order:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Order")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Family:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Family")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Subfamily:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("subfamily")
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td>
+                                                    Tribe:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("tribe")
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Subtribe:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("subtribe")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Genus:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Genus")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Species:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("sciName")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Subspecies:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("subspecies")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Author:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("author")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Determiner:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("determiner")
+                                                </td>
+                                                <td>
+                                                    Year:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("year")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Check for Synonyms:
+                                                </td>
+                                                <td>
+                                                    @Html.CheckBox("syn")
+                                                    <label for="Synonyms">Synonyms</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Check to include Parts:
+                                                </td>
+                                                <td>
+                                                    @Html.CheckBox("parts")
+                                                    <label for="Parts">Parts</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                        </table>
+
+
+                                        <hr>
+
+
+                                        <table cellpadding="5">
+                                            <tr>
+                                                <th>Speciman Related:</th>
+                                                <th></th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Any Identifier:
+                                                </td>
+                                                <td>
+                                                    @Html.CheckBox("anyId")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Catalog Number:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("catalogNum")
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Accession:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("accession")
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>
+                                                    GUID:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("GUID")
+                                                </td>
+                                            <tr>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Other Identifier Type:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("otherIdtype")
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                        <hr>
+
+
+                                        <table cellpadding="5">
+                                            <tr>
+                                                <th>
+                                                    Locality:
+                                                </th>
+                                                <th>
+
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Continent / Ocean:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("Continent")
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Country:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("Country")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Province/Territory/State:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("State")
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    County:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("County")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Locality Remarks:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("Locality")
+                                                </td>
+                                            </tr>
+                                        </table>
+
+
+                                        <div class="col-md-3">
+                                            <button type="button">Clear</button>
+                                            @*<a href=" /SearchResults"><button type="button">Search</button></a>*@
+                                            <input type="submit" value="Search" />
+                                        </div>
+
+
+
+                                    </div> <!-- .panel-body -->
+                                </div> <!-- #collapse-2-6 -->
+                            </div><!-- .panel -->
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        }<!--End of Form-->
         @*End of lifesciences Tab*@
 
         @*Beginning of Earth Sciences Tab*@
@@ -499,476 +493,473 @@
             <h1>Search the Earth & Paleontology Collections : </h1>
 
             <hr>
-            <div style="padding-bottom:60px">
-                <div class="col-md-3">
-                    Collection:
-                </div>
-                <div class="col-md-3">
-                    <div>
-                        <input type="checkbox" id="Invertebrates" />
-                        <label for="Invertebrates">Invertebrates</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="Plants" />
-                        <label for="Plants">Plants</label>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div>
-                        <input type="checkbox" id="Veterbrates" />
-                        <label for="Veterbrates">Veterbrates</label>
+            @using (Html.BeginForm("Index", "SearchResults", FormMethod.Get))
+            {
+                <div style="padding-bottom:60px">
+
+                    <div class="col-md-3">
+                        Collection:
                     </div>
 
-
-                    <div>
-                        <input type="checkbox" id="Rocks and Minerals" />
-                        <label for="Rocks and Minerals">Rocks and Minerals</label>
+                    <div class="col-md-3">
+                        <div>
+                            @Html.CheckBox("invertebrates")
+                            <label for="Invertebrates">Invertebrates</label>
+                        </div>
+                        <div>
+                            @Html.CheckBox("plants")
+                            <label for="Plants">Plants</label>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <section class="site-content" id="skip-to-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-2" href="#collapse-2-6" class="collapsed">
-                                        <i class="fa fa-fw fa-lg fa-plus"></i>
-                                        <i class="fa fa-fw fa-lg fa-minus"></i>
-                                        Advanced Search
-                                    </a>
-                                </h4>
-                            </div> <!-- .panel-heading -->
-
-                            <div id="collapse-2-6" class="panel-primary">
-                                <div class="panel-body">
-                                    <table cellpadding="5">
-                                        <tr>
-                                            <th>Taxonomy:</th>
-                                            <th></th>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Any Taxon, ID, Common Name:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Any Taxon, ID, Common Name">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Identification:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Identification">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Common Name:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Common Name">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Kingdom:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Kingdom">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Phylum:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Phylum">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Class:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Class">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-
-                                                Order:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Order">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Family:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Family">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Subfamily:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Subfamily">
-                                            </td>
-                                        </tr>
+                    <div class="col-md-3">
+                        <div>
+                            @Html.CheckBox("vertebrates")
+                            <label for="Veterbrates">Veterbrates</label>
+                        </div>
 
 
-                                        <tr>
-                                            <td>
-                                                Tribe:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Tribe">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Subtribe:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Subtribe">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Genus:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Genus">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Species:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Species">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Subspecies:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Subspecies">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Author:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Author">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Determiner:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Determiner">
-                                            </td>
-                                            <td>
-                                                Year:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Year">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Check for Synonyms:
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Synonyms" />
-                                                <label for="Synonyms">Synonyms</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Check to include Parts:
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Parts" />
-                                                <label for="Parts">Parts</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                    </table>
-
-                                    <hr>
-                                    @*Geology Attribute would benefit from splitting up into 2 parts*@
-                                    @*First Part Age*@
-
-                                    <table cellpadding="5">
-                                        <tr>
-                                            <th>Age:</th>
-                                            <th></th>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Era/Erathem:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Era/Erathem">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                System/Period:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="System/Period">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Series/Epoch:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Series/Epoch">
-                                            </td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>
-                                                Stage/Age:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Stage/Age">
-                                            </td>
-                                        <tr>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Other Identifier Type:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Other Identifier Type" />
-                                            </td>
-                                        </tr>
-
-                                    </table>
-                                    <hr>
-
-
-                                    @*Geology Attribute would benefit from splitting up into 2 parts*@
-                                    @*Second Part Rock Unit*@
-
-                                    <table cellpadding="5">
-                                        <tr>
-                                            <th>Rock Unit:</th>
-                                            <th></th>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Group:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Group">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Formation:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Formation">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Member:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Member">
-                                            </td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>
-                                                Bed:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Bed">
-                                            </td>
-                                        <tr>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Other Identifier Type:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Other Identifier Type" />
-                                            </td>
-                                        </tr>
-
-                                    </table>
-                                    <hr>
-
-
-
-
-
-                                    <table cellpadding="5">
-                                        <tr>
-                                            <th>Speciman Related:</th>
-                                            <th></th>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Any Identifier:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Any Identifier">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Catalog Number:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Catalog Number">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Accession:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Accession">
-                                            </td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>
-                                                GUID:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="GUID">
-                                            </td>
-                                        <tr>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Other Identifier Type:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Other Identifier Type" />
-                                            </td>
-                                        </tr>
-
-                                    </table>
-                                    <hr>
-
-
-                                    <table cellpadding="5">
-                                        <tr>
-                                            <th>
-                                                Locality:
-                                            </th>
-                                            <th>
-
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Continent / Ocean:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Continent / Ocean">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Country:
-                                            </td>
-
-                                            <td>
-                                                <select id="Country">
-                                                    <option value="defaultCountry" selected disabled hidden>Select Country</option>
-
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Province/Territory/State:
-                                            </td>
-                                            <td>
-                                                <select id="State">
-                                                    <option value="defaultState" selected disabled hidden>Select State/Province</option>
-
-                                                </select>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                County:
-                                            </td>
-                                            <td>
-                                                <select id="County">
-                                                    <option value="defaultCounty" selected disabled hidden>Select County</option>
-
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Locality Remarks:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Locality Remarks">
-                                            </td>
-                                        </tr>
-                                    </table>
-
-
-                                    <div class="col-md-3">
-                                        <button type="button">Clear</button>
-                                        <a href=" /SearchResults"><button type="button">Search</button></a>
-                                    </div>
-
-
-
-                                </div> <!-- .panel-body -->
-                            </div> <!-- #collapse-2-6 -->
-                        </div> <!-- .panel -->
+                        <div>
+                            @Html.CheckBox("rocks")
+                            <label for="Rocks and Minerals">Rocks and Minerals</label>
+                        </div>
                     </div>
                 </div>
-            </section>
+
+                <section class="site-content" id="skip-to-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-2" href="#collapse-2-6" class="collapsed">
+                                            <i class="fa fa-fw fa-lg fa-plus"></i>
+                                            <i class="fa fa-fw fa-lg fa-minus"></i>
+                                            Advanced Search
+                                        </a>
+                                    </h4>
+                                </div> <!-- .panel-heading -->
+
+                                <div id="collapse-2-6" class="panel-primary">
+                                    <div class="panel-body">
+                                        <table cellpadding="5">
+                                            <tr>
+                                                <th>Taxonomy:</th>
+                                                <th></th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Any Taxon, ID, Common Name:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("commonName")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Identification:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Identification")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Common Name:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("commonName")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Kingdom:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Kingdom")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Phylum:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Phylum")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Class:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Class")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+                                                    Order:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Order")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Family:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Family")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Subfamily:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("subfamily")
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td>
+                                                    Tribe:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("tribe")
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Subtribe:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("subtribe")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Genus:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Genus")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Species:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("sciName")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Subspecies:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("subspecies")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Author:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("author")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Determiner:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("determiner")
+                                                </td>
+                                                <td>
+                                                    Year:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("year")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Check for Synonyms:
+                                                </td>
+                                                <td>
+                                                    @Html.CheckBox("syn")
+                                                    <label for="Synonyms">Synonyms</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Check to include Parts:
+                                                </td>
+                                                <td>
+                                                    @Html.CheckBox("parts")
+                                                    <label for="Parts">Parts</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                        </table>
+
+                                        <hr>
+                                        @*Geology Attribute would benefit from splitting up into 2 parts*@
+                                        @*First Part Age*@
+
+                                        <table cellpadding="5">
+                                            <tr>
+                                                <th>Age:</th>
+                                                <th></th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Era/Erathem:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("era")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    System/Period:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("period")
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Series/Epoch:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("series")
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>
+                                                    Stage/Age:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("stage")
+                                                </td>
+                                            <tr>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Other Identifier Type:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("otherId")
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                        <hr>
+
+
+                                        @*Geology Attribute would benefit from splitting up into 2 parts*@
+                                        @*Second Part Rock Unit*@
+
+                                        <table cellpadding="5">
+                                            <tr>
+                                                <th>Rock Unit:</th>
+                                                <th></th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Group:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("group")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Formation:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("formation")
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Member:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("member")
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>
+                                                    Bed:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("bed")
+                                                </td>
+                                            <tr>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Other Identifier Type:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("otherId")
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                        <hr>
+
+
+
+
+
+                                        <table cellpadding="5">
+                                            <tr>
+                                                <th>Speciman Related:</th>
+                                                <th></th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Any Identifier:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("anyId")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Catalog Number:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("catalogNum")
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Accession:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("accession")
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>
+                                                    GUID:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("GUID")
+                                                </td>
+                                            <tr>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Other Identifier Type:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("otherId")
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                        <hr>
+
+
+                                        <table cellpadding="5">
+                                            <tr>
+                                                <th>
+                                                    Locality:
+                                                </th>
+                                                <th>
+
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Continent / Ocean:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("Continent")
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Country:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("Country")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Province/Territory/State:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("State")
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    County:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("County")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Locality Remarks:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("localityRemarks")
+                                                </td>
+                                            </tr>
+                                        </table>
+
+
+                                        <div class="col-md-3">
+                                            <button type="button">Clear</button>
+                                            <input type="submit" value="Search" />
+                                        </div>
+
+
+
+                                    </div> <!-- .panel-body -->
+                                </div><!-- #collapse-2-6 -->
+
+                            </div> <!-- .panel -->
+                        </div>
+                    </div>
+                </section>
+            }<!--End of Form-->
         </div>
         @*End of Earth Sciences Tab*@
         @*Beginning of History and Ethnology Tabs*@
@@ -976,420 +967,421 @@
             <h1>Search the Earth and Paleontology Collections : </h1>
 
             <hr>
-            <div>
-                <div class="col-md-1">
-                    Collection:
-                </div>
-                <div class="col-md-3">
-                    <div>
-                        <input type="checkbox" id="Built Environment Objects" />
-                        <label for="Built Environment Objects">Built Environment Objects</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="Furnishings" />
-                        <label for="Furnishings">Furnishings</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="Personal Objects" />
-                        <label for="Personal Objects">Personal Objects</label>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div>
-                        <input type="checkbox" id="Tools & Equipment for Materials" />
-                        <label for="Tools & Equipment for Materials">Tools & Equipment for Materials</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="Tools & Equipment for Science/Technology" />
-                        <label for="Tools & Equipment for Science/Technology">Tools & Equipment for Science/Technology</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="Tools & Equipment for Communication" />
-                        <label for="Tools & Equipment for Communication">Tools & Equipment for Communication</label>
-                    </div>
-                </div>
+            @using (Html.BeginForm("Index", "SearchResults", FormMethod.Get))
+            {
                 <div>
-                    <div>
-                        <input type="checkbox" id="Distrubution & Transportation Objects" />
-                        <label for="Distrubution & Transportation Objects">Distrubution & Transportation Objects</label>
+                    <div class="col-md-1">
+                        Collection:
                     </div>
-                    <div>
-                        <input type="checkbox" id="Communication Objects" />
-                        <label for="Communication Objects">Communication Objects</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="Recreational Objects" />
-                        <label for="Recreational Objects">Recreational Objects</label>
-                    </div>
-
-                </div>
-                @*<div class="col-md-3">
+                    <div class="col-md-3">
                         <div>
-                            <input type="checkbox" id="Unclassifiable Objects" />
-                            <label for="Unclassifiable Objects">Unclassifiable Objects</label>
+                            @Html.CheckBox("builtEnvObj")
+                            <label for="Built Environment Objects">Built Environment Objects</label>
+                        </div>
+                        <div>
+                            @Html.CheckBox("furnishing")
+                            <label for="Furnishings">Furnishings</label>
+                        </div>
+                        <div>
+                            @Html.CheckBox("personalObj")
+                            <label for="Personal Objects">Personal Objects</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            @Html.CheckBox("toolsMats")
+                            <label for="Tools & Equipment for Materials">Tools & Equipment for Materials</label>
+                        </div>
+                        <div>
+                            @Html.CheckBox("toolsSci")
+                            <label for="Tools & Equipment for Science/Technology">Tools & Equipment for Science/Technology</label>
+                        </div>
+                        <div>
+                            @Html.CheckBox("toolsCom")
+                            <label for="Tools & Equipment for Communication">Tools & Equipment for Communication</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            @Html.CheckBox("transportationObj")
+                            <label for="Distrubution & Transportation Objects">Distrubution & Transportation Objects</label>
+                        </div>
+                        <div>
+                            @Html.CheckBox("comObj")
+                            <label for="Communication Objects">Communication Objects</label>
+                        </div>
+                        <div>
+                            @Html.CheckBox("recObj")
+                            <label for="Recreational Objects">Recreational Objects</label>
                         </div>
 
-                    </div>*@
-            </div>
-
-            <section class="site-content" id="skip-to-content">
-                <div class="container">
-                    <div class="row">
-
-                        @*<div class="col-md-9">
-                            <div class="panel-group" id="accordion">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-1">
-                                                Collapsible Group Item #1
-                                                <i class="fa fa-lg fa-angle-down pull-right"></i>
-                                                <i class="fa fa-lg fa-angle-up pull-right"></i>
-                                            </a>
-                                        </h4>
-                                    </div> <!-- .panel-heading -->
-                                    <div id="collapse-1" class="panel-collapse collapse in">
-                                        <div class="panel-body">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                        </div> <!-- .panel-body -->
-                                    </div> <!-- #collapse-1 -->
-                                </div> <!-- .panel -->
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse-2" class="collapsed">
-                                                Collapsible Group Item #2
-                                                <i class="fa fa-lg fa-angle-down pull-right"></i>
-                                                <i class="fa fa-lg fa-angle-up pull-right"></i>
-                                            </a>
-                                        </h4>
-                                    </div> <!-- .panel-heading -->*@
-
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion-2" href="#collapse-2-6" class="collapsed">
-                                        <i class="fa fa-fw fa-lg fa-plus"></i>
-                                        <i class="fa fa-fw fa-lg fa-minus"></i>
-                                        Advanced Search
-                                    </a>
-                                </h4>
-                            </div> <!-- .panel-heading -->
-
-                            <div id="collapse-2-6" class="panel-primary">
-                                <div class="panel-body">
-                                    <table cellpadding="5">
-                                        <tr>
-                                            <th>Taxonomy:</th>
-                                            <th></th>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Any Taxon, ID, Common Name:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Any Taxon, ID, Common Name">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Identification:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Identification">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Common Name:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Common Name">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Natural Order Class:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Natural Order Class">
-                                            </td>
-
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Natural Order SubClass:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Natural Order SubClass">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Primary Term:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Primary Term">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-
-                                                Secondary Term:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Secondary Term">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Tertiary Term:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Tertiary Term">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Non-Preferred Term:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="NonPreferred Term">
-                                            </td>
-                                        </tr>
-
-
-                                        <tr>
-                                            <td>
-                                                Description:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Description">
-                                            </td>
-                                        </tr>
-
-
-
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Author:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Author">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Creator/Maker Manufacturer:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Creator/Maker Manufacturer">
-                                            </td>
-
-                                            <td>
-                                                Date of Manufacture:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Date of Manufacture">
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Check for Synonyms:
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Synonyms" />
-                                                <label for="Synonyms">Synonyms</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td>
-                                                Check to Include Parts:
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" id="Parts" />
-                                                <label for="Parts">Parts</label>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                    </table>
-
-
-                                    <hr>
-
-
-                                    <table cellpadding="5">
-                                        <tr>
-                                            <th>Speciman Related:</th>
-                                            <th></th>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Any Identifier:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Any Identifier">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Catalog Number:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Catalog Number">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Accession:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Accession">
-                                            </td>
-                                        </tr>
-                                        <tr>
-
-                                            <td>
-                                                GUID:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="GUID">
-                                            </td>
-                                        <tr>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Size:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Size" />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Condition:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Condition" />
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Condition Remarks:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Condition Remarks" />
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Other Identifier Type:
-                                            </td>
-                                            <td>
-                                                <input type="text" name="Other Identifier Type" />
-                                            </td>
-                                        </tr>
-
-                                    </table>
-                                    <hr>
-
-
-                                    <table cellpadding="5">
-                                        <tr>
-                                            <th>
-                                                Locality:
-                                            </th>
-                                            <th>
-
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Continent / Ocean:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Continent / Ocean">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                Country:
-                                            </td>
-
-                                            <td>
-                                                <select id="Country">
-                                                    <option value="defaultCountry" selected disabled hidden>Select Country</option>
-
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Province/Territory/State:
-                                            </td>
-                                            <td>
-                                                <select id="State">
-                                                    <option value="defaultState" selected disabled hidden>Select State/Province</option>
-
-                                                </select>
-                                            </td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                County:
-                                            </td>
-                                            <td>
-                                                <select id="County">
-                                                    <option value="defaultCounty" selected disabled hidden>Select County</option>
-
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Locality Remarks:
-                                            </td>
-
-                                            <td>
-                                                <input type="text" name="Locality Remarks">
-                                            </td>
-                                        </tr>
-                                    </table>
-
-
-                                    <div class="col-md-3">
-                                        <button type="button">Clear</button>
-                                        @*<a href=" /SearchResults"><button type="button">Search</button></a>*@
-                                        <a href=" /SearchResults"></a><button type="button">Search</button>
-                                    </div>
-
-
-
-                                </div> <!-- .panel-body -->
-                            </div> <!-- #collapse-2-6 -->
-                        </div> <!-- .panel -->
                     </div>
+                    @*<div class="col-md-3">
+                            <div>
+                                <input type="checkbox" id="Unclassifiable Objects" />
+                                <label for="Unclassifiable Objects">Unclassifiable Objects</label>
+                            </div>
+                        </div>*@
                 </div>
-            </section>
+
+                <section class="site-content" id="skip-to-content">
+                    <div class="container">
+                        <div class="row">
+
+                            @*<div class="col-md-9">
+                                <div class="panel-group" id="accordion">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-1">
+                                                    Collapsible Group Item #1
+                                                    <i class="fa fa-lg fa-angle-down pull-right"></i>
+                                                    <i class="fa fa-lg fa-angle-up pull-right"></i>
+                                                </a>
+                                            </h4>
+                                        </div> <!-- .panel-heading -->
+                                        <div id="collapse-1" class="panel-collapse collapse in">
+                                            <div class="panel-body">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            </div> <!-- .panel-body -->
+                                        </div> <!-- #collapse-1 -->
+                                    </div> <!-- .panel -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-2" class="collapsed">
+                                                    Collapsible Group Item #2
+                                                    <i class="fa fa-lg fa-angle-down pull-right"></i>
+                                                    <i class="fa fa-lg fa-angle-up pull-right"></i>
+                                                </a>
+                                            </h4>
+                                        </div> <!-- .panel-heading -->*@
+
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion-2" href="#collapse-2-6" class="collapsed">
+                                            <i class="fa fa-fw fa-lg fa-plus"></i>
+                                            <i class="fa fa-fw fa-lg fa-minus"></i>
+                                            Advanced Search
+                                        </a>
+                                    </h4>
+                                </div> <!-- .panel-heading -->
+
+                                <div id="collapse-2-6" class="panel-primary">
+                                    <div class="panel-body">
+                                        <table cellpadding="5">
+                                            <tr>
+                                                <th>Taxonomy:</th>
+                                                <th></th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Any Taxon, ID, Common Name:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("anyTax")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Identification:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Identification")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Common Name:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("commonName")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Natural Order Class:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("naturalOrderClass")
+                                                </td>
+
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Natural Order SubClass:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("naturalOrderSubclass")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Primary Term:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("primaryTerm")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+
+                                                    Secondary Term:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("saturdayTerm")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Tertiary Term:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("tertiaryTerm")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Non-Preferred Term:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("nonPreferredTerm")
+                                                </td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td>
+                                                    Description:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("Description")
+                                                </td>
+                                            </tr>
+
+
+
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Author:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("author")
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Creator/Maker Manufacturer:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("maker")
+                                                </td>
+
+                                                <td>
+                                                    Date of Manufacture:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("manuDate")
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Check for Synonyms:
+                                                </td>
+                                                <td>
+                                                    @Html.CheckBox("syn")
+                                                    <label for="Synonyms">Synonyms</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr>
+                                                <td>
+                                                    Check to Include Parts:
+                                                </td>
+                                                <td>
+                                                    @Html.CheckBox("parts")
+                                                    <label for="Parts">Parts</label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                        </table>
+
+
+                                        <hr>
+
+
+                                        <table cellpadding="5">
+                                            <tr>
+                                                <th>Speciman Related:</th>
+                                                <th></th>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Any Identifier:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("anyId")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Catalog Number:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("catalogNum")
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Accession:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("accession")
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>
+                                                    GUID:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("GUID")
+                                                </td>
+                                            <tr>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Size:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("size")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Condition:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("condition")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Condition Remarks:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("conditionRemarks")
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Other Identifier Type:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("otherId")
+                                                </td>
+                                            </tr>
+
+                                        </table>
+                                        <hr>
+
+
+                                        <table cellpadding="5">
+                                            <tr>
+                                                <th>
+                                                    Locality:
+                                                </th>
+                                                <th>
+
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Continent / Ocean:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("Continent")
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Country:
+                                                </td>
+
+                                                <td>
+
+                                                    @Html.TextBox("Country")
+
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Province/Territory/State:
+                                                </td>
+                                                <td>
+                                                    <select id="State">
+                                                        @Html.TextBox("State")
+
+                                                    </select>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    County:
+                                                </td>
+                                                <td>
+                                                    @Html.TextBox("County")
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Locality Remarks:
+                                                </td>
+
+                                                <td>
+                                                    @Html.TextBox("localityRemarks")
+                                                </td>
+                                            </tr>
+                                        </table>
+
+
+                                        <div class="col-md-3">
+                                            <button type="button">Clear</button>
+                                            @*<a href=" /SearchResults"><button type="button">Search</button></a>*@
+                                            @*<a href=" /SearchResults"></a><button type="button">Search</button>*@
+                                            <input type="submit" value="Search" />
+                                        </div>
+
+
+
+                                    </div> <!-- .panel-body -->
+                                </div> <!-- #collapse-2-6 -->
+
+                            </div> <!-- .panel -->
+                        </div>
+                    </div>
+                </section>
+            } <!--End of Form-->
         </div>
         @*End of Ethnology Tab*@
     </div>

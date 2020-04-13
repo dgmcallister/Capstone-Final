@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wajaa\\source\\repos\\CFinal\\Capstone_Museum\\Capstone_Museum.csproj": {}
+    "C:\\Users\\wajaa\\Source\\Repos\\CFinal\\Capstone_Museum\\Capstone_Museum.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wajaa\\source\\repos\\CFinal\\Capstone_Museum\\Capstone_Museum.csproj": {
+    "C:\\Users\\wajaa\\Source\\Repos\\CFinal\\Capstone_Museum\\Capstone_Museum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wajaa\\source\\repos\\CFinal\\Capstone_Museum\\Capstone_Museum.csproj",
+        "projectUniqueName": "C:\\Users\\wajaa\\Source\\Repos\\CFinal\\Capstone_Museum\\Capstone_Museum.csproj",
         "projectName": "Capstone_Museum",
-        "projectPath": "C:\\Users\\wajaa\\source\\repos\\CFinal\\Capstone_Museum\\Capstone_Museum.csproj",
+        "projectPath": "C:\\Users\\wajaa\\Source\\Repos\\CFinal\\Capstone_Museum\\Capstone_Museum.csproj",
         "packagesPath": "C:\\Users\\wajaa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wajaa\\source\\repos\\CFinal\\Capstone_Museum\\obj\\",
+        "outputPath": "C:\\Users\\wajaa\\Source\\Repos\\CFinal\\Capstone_Museum\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

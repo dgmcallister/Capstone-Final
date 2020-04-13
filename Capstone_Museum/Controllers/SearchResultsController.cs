@@ -20,7 +20,7 @@ namespace Capstone_Museum.Controllers
     public class SearchResultsController : Controller
     {
         //Sends the API results to be formmated for results
-        public IActionResult Index()
+        public IActionResult Index(SearchModel searchModel)
         {
             var json = GetGenResults().Result; //results of the search
             List<GenResults.ResultObject> objList = new List<GenResults.ResultObject>();
