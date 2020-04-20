@@ -13,6 +13,7 @@ namespace Capstone_Museum.Controllers
 {
     public class DetailsController : Controller
     {
+        //Same Info call as the search results but for a specific item//
         public IActionResult Index(string GUID)
         {
             var json = GetResults(GUID).Result;
