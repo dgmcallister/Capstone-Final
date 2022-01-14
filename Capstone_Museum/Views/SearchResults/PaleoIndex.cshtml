@@ -1,0 +1,159 @@
+﻿@model IList<Capstone_Museum.Models.GenResults.ResultObject>
+
+@{
+    ViewData["Title"] = "SearchResults";
+}
+
+@*<h1>Search Results</h1>*@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if IE 9]>
+<html id="ie9" lang="en-US">
+<![endif]-->
+<!--[if !IE]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+    <title>Search Results| The University of Alabama Research and Collections</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,300,600,700" rel="stylesheet" />
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../assets/css/style.min.css" rel="stylesheet" />
+    <link href="../assets/css/prism.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="touch-overlay"></div>
+    <div class="breadcrumb-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <h1 class="breadcrumb-page-title"></h1>
+                </div> <!-- .col-md-6 -->
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+    </div> <!-- .breadcrumb-wrapper --><section class="site-content">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div class="pull-left">
+                        <h2 id="color-gray" class="page-header">Search Results</h2>
+                    </div>
+                    <div class="pull-right">
+                        <div>
+                            
+                            @{List<GenResults.ResultObject> resultList = new List<GenResults.ResultObject>(); }
+                            @{GenResults.ResultObject columns = new GenResults.ResultObject();
+                                columns.GUID = "GUID";
+                                columns.sciName = "Scientific Name";
+                                columns.Country = "Country";
+                                columns.State = "State";
+                                columns.Locality = "Specific Locality";
+                                columns.Date = "Date";
+                                columns.Lat = "Latitude";
+                                columns.Long = "Longitude";
+                                columns.uncertaintyMeters = "Meters of Uncertainty";
+                                resultList.Add(columns);
+                            }
+                            @{String stringBuild="GUID,Scientific Name,Country,State,Specific Locality,Date,Latitude,Longitude,Meters Of Uncertainty\n"; }
+                            @foreach (var item in Model)
+                            {
+                                if (item.State.Length > 2) item.State = item.State.Remove(item.State.Length - 2);
+                                if (item.Lat.Length > 2) item.Lat = item.Lat.Remove(item.Lat.Length - 1);
+
+
+                                stringBuild = stringBuild+item.GUID + "," + item.sciName + "," + item.Country + "," + item.State + "," + item.Locality + "," +
+                                item.Date + "," + item.Lat + "," + item.Long + "," + item.uncertaintyMeters+"\n";// + "," + item.Kingdom + "," + item.Kingdom + "," + item.Phylum
+                                                                                                                 //+ "," + item.Class + "," + item.Order + "," + item.Family + "," + item.subfamily + "," + item.Genus + "," + item.commonName + "," +
+
+                                //item.idBy + "," + item.natureOfId + "," + item.Remarks);
+
+                                if (item.State.Length > 2) item.State = item.State + ", ";
+                                if (item.Lat.Length > 2) item.Lat = item.Lat + ",";
+                            }
+
+                            
+
+                            @Html.ActionLink("Export to CSV", "ExportResults", "SearchResults", new { sb=stringBuild }, null)
+                        </div>
+                    </div>
+                    <div class="col-md-9" style="width:100%">
+                        <ul class="nav nav-tabs nav-tabs-color-bg" role="tablist">
+                            <li class="active">
+                                <a href="#home-4" role="tab" data-toggle="tab">Identifiers</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="home-4">
+                                <table class="table table-striped table-bordered datatables-example" border="1" cellspacing="0" width="100%">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">GUID</th>
+                                            <th scope="col">Identified As</th>
+                                            <th scope="col">Locality</th>
+                                            <th scope="col">Jurisdiction</th>
+                                            <th scope="col">Verbatim Date</th>
+                                            <th scope="col">Coordinates</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    @*<tfoot>
+                                            <tr>
+                                                <th>GUID</th>
+                                                <th>Identified As</th>
+                                                <th>Locality</th>
+                                                <th>Location</th>
+                                                <th>Date</th>
+                                                <th>Latitude</th>
+                                                <th>Longitude</th>
+                                            </tr>
+                                        </tfoot>*@
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+
+                                                <td scope="row">@Html.ActionLink(item.GUID, "Index", "Details", null, null, null, new { item.GUID }, null)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.sciName)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Locality)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.State)@Html.DisplayFor(modelItem => item.Country)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Date)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Lat)@Html.DisplayFor(modelItem => item.Long)</td>
+                                                
+
+
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> <!-- .tab-content -->
+                    </div> <!-- .col-md-9 -->
+                </div> <!-- .row -->
+            </div> <!-- .container -->
+        </div>
+
+    </section>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <script src="../../js/dataTables.min.js"></script>
+    <script src="../../js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $('.datatables-example').DataTable();
+        });
+    </script>
+    <script src="../../js/scripts.min.js"></script>
+</body>
+</html>

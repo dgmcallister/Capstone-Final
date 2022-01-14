@@ -1,0 +1,364 @@
+﻿@model Capstone_Museum.Models.GenResults.ResultObject
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        * {
+            box-sizing: border-box
+        }
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial;
+        }
+       @* div.c{
+            text-align: right;
+            float: right;
+            position: relative;
+            bottom: 100px
+        }*@
+        #taxonomy {
+            width: 25%;
+            border: solid;
+            border-color: #900F0F;
+            border-width: thin;
+            border-spacing: 2px
+        }
+        div.picture-box{
+            width: 25%;
+            float: right;
+            text-align: right;
+        }
+        table.parts-table{
+            border: 1px solid black;
+        }
+        tr.parts-table {
+            border: 1px solid black;
+        }
+        th.parts-related{
+            border-right: 1px solid black
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 ">
+                <h4>Specimen Details</h4>
+                <div style="color: #900F0F;"><h3>@Html.DisplayFor(modelItem => modelItem.GUID)</h3></div>
+                <h2><b><i>@Html.DisplayFor(modelItem => modelItem.sciName)</i> @Html.DisplayFor(modelItem => modelItem.author)</b></h2>
+                
+                <h4 style="color: #900F0F; ">Taxonomy</h4>
+
+            </div>
+            
+        </div>
+        <div class="row" >
+            <div class="col-lg-6 text-justify" id="taxonomy">
+                <table>
+                    <tr>
+                        <th style="padding: 8px;">Kingdom:</th>
+                        <td style="padding: 8px;">@Html.DisplayFor(modelItem => modelItem.Kingdom)</td>
+                    </tr>
+                    <tr>
+                        <th style="padding: 8px;">Phylum:</th>
+                        <td style="padding: 8px;">@Html.DisplayFor(modelItem => modelItem.Phylum)</td>
+                    </tr>
+                    <tr>
+                        <th style="padding: 8px;">Class:</th>
+                        <td style="padding: 8px;">@Html.DisplayFor(modelItem => modelItem.Class)</td>
+                    </tr>
+                    <tr>
+                        <th style="padding: 8px;">Order:</th>
+                        <td style="padding: 8px;">@Html.DisplayFor(modelItem => modelItem.Order)</td>
+                    </tr>
+                    <tr>
+                        <th style="padding: 8px;">Family:</th>
+                        <td style="padding: 8px;">@Html.DisplayFor(modelItem => modelItem.Family)</td>
+                    </tr>
+                    <tr>
+                        <th style="padding: 8px;">Subfamily:</th>
+                        <td style="padding: 8px;">@Html.DisplayFor(modelItem => modelItem.subfamily)</td>
+                    </tr>
+                    <tr>
+                        <th style="padding: 8px;">Genus:</th>
+                        <td style="padding: 8px;"><i>@Html.DisplayFor(modelItem => modelItem.Genus)</i></td>
+                    </tr>
+                    <tr>
+                        <th style="padding: 8px;">Species:</th>
+                        <td style="padding: 8px;">@Html.DisplayFor(modelItem => modelItem.Species)</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="col-lg-5 col-lg-offset-3 col-md-5 col-md-offset-3 " id="pic-box">
+                <div class="row">
+                    
+
+                    @if (!@Model.imageURL[0].Equals("css/pictures/No_image_available.png"))
+                    {
+                    <div class="col-lg-1 col-md-1 col-sm-1 align-self-center order-lg-1"><button class="w3-button w3-black " onclick="plusDivs(-1)">&#10094;</button></div>
+                    <div class="col-lg-1 col-lg-offset-9 col-md-1 col-sm-1 align-self-center order-lg-3"><button class="w3-button w3-black " onclick="plusDivs(1)">&#10095;</button></div>
+                    }
+                    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-1 col-sm-8 col-sm-offset-1  order-lg-2" style="padding-bottom: 10px; padding-right: 30px"><a href=@Model.linkedItem[0]> <img class="mySlides" src=@Model.imageURL[0] style="max-width:100%; height:auto; display:block" /></a></div>
+
+
+                    @if (@Model.imageURL[1] != null)
+                    {
+                        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-1 col-sm-8 col-sm-offset-1 "><a href=@Model.linkedItem[1]> <img class="mySlides" src=@Model.imageURL[1] style="max-width: 100%; height: auto; display: block" /></a></div>
+                    }
+                    @if (@Model.imageURL[2] != null)
+                    {
+                        <a href=@Model.linkedItem[2]><img class="mySlides" src=@Model.imageURL[2] style="width:50%"></a>
+                    }
+                    @if (@Model.imageURL[3] != null)
+                    {
+                        <a href=@Model.linkedItem[3]><img class="mySlides" src=@Model.imageURL[3] style="width:50%"></a>
+                    }
+                    @if (@Model.imageURL[4] != null)
+                    {
+                        <a href=@Model.linkedItem[4]><img class="mySlides" src=@Model.imageURL[4] style="width:50%"></a>
+                    }
+                    @if (@Model.imageURL[5] != null)
+                    {
+                        <a href=@Model.linkedItem[5]><img class="mySlides" src=@Model.imageURL[5] style="width:50%"></a>
+                    }
+                    @if (@Model.imageURL[6] != null)
+                    {
+                        <a href=@Model.linkedItem[6]><img class="mySlides" src=@Model.imageURL[6] style="width:50%"></a>
+                    }
+                    @if (@Model.imageURL[7] != null)
+                    {
+                        <a href=@Model.linkedItem[7]><img class="mySlides" src=@Model.imageURL[7] style="width:50%"></a>
+                    }
+                    @if (@Model.imageURL[8] != null)
+                    {
+                        <a href=@Model.linkedItem[8]><img class="mySlides" src=@Model.imageURL[8] style="width:50%"></a>
+                    }
+                    @if (@Model.imageURL[9] != null)
+                    {
+                        <a href=@Model.linkedItem[9]><img class="mySlides" src=@Model.imageURL[9] style="width:50%"></a>
+                    }
+                    @if (@Model.imageURL[10] != null)
+                    {
+                        <a href=@Model.linkedItem[10]><img class="mySlides" src=@Model.imageURL[10] style="width:50%"></a>
+                    }
+
+
+                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-0">
+                <h4 style="color: #900F0F; ">Parts Related</h4>
+                <table class="parts-table" id="table1" style=" width: 40%; border: thick; ">
+                    <tr class="parts-table">
+                        <th style="border-right: 1px solid black; padding: 10px; ">Part Name</th>
+                        <th style="border-right: 1px solid black; padding: 10px">Condition</th>
+                        <th style="border-right: 1px solid black; padding: 10px">Disposition</th>
+                        <th style="border-right: 1px solid black; padding: 10px">QTY</th>
+                        <th style="border-right: 1px solid black; padding: 10px">Remarks</th>
+                    </tr>
+                    <tr class="parts-table">
+                        <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.parts[0])</td>
+                        <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.conditions[0])</td>
+                        <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.dispositions[0])</td>
+                        <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.quantities[0])</td>
+                        <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.partRemarks[0])</td>
+                    </tr>
+                    @if (@Model.parts[1] != null)
+                    {
+                        <tr class="parts-table">
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.parts[1])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.conditions[1])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.dispositions[1])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.quantities[1])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.partRemarks[1])</td>
+                        </tr>
+                    }
+                    @if (@Model.parts[2] != null)
+                    {
+                        <tr class="parts-table">
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.parts[2])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.conditions[2])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.dispositions[2])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.quantities[2])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.partRemarks[2])</td>
+                        </tr>
+                    }
+                    @if (@Model.parts[3] != null)
+                    {
+                        <tr class="parts-table">
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.parts[3])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.conditions[3])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.dispositions[3])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.quantities[3])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.partRemarks[3])</td>
+                        </tr>
+                    }
+                    @if (@Model.parts[4] != null)
+                    {
+                        <tr class="parts-table">
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.parts[4])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.conditions[4])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.dispositions[4])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.quantities[4])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.partRemarks[4])</td>
+                        </tr>
+                    }
+                    @if (@Model.parts[5] != null)
+                    {
+                        <tr class="parts-table">
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.parts[5])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.conditions[5])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.dispositions[5])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.quantities[5])</td>
+                            <td style="border-right: 1px solid black; padding: 10px">@Html.DisplayFor(modelItem => modelItem.partRemarks[5])</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+            
+            <div class="col-lg-4 col-lg-offset-1 padding-top-0">
+
+                <table>
+                    <tr>
+                        <th style="text-align: left; border-bottom: 1px solid black">GUID / Catalog #</th>
+                        <td style="text-align: right; border-bottom: 1px solid black">@Html.DisplayFor(modelItem => modelItem.GUID)</td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; border-bottom: 1px solid black">Original Identifier</th>
+                        <td style="text-align: right; border-bottom: 1px solid black">@Html.DisplayFor(modelItem => modelItem.accession)</td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; border-bottom: 1px solid black">Collector</th>
+                        <td style="text-align: right; border-bottom: 1px solid black">@Html.DisplayFor(modelItem => modelItem.collector)</td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; border-bottom: 1px solid black">Determiner</th>
+                        <td style="text-align: right; border-bottom: 1px solid black">@Html.DisplayFor(modelItem => modelItem.attributeDeterminers[0])</td>
+                    </tr>
+                    <tr>
+                        <th style="text-align: left; border-bottom: 1px solid black">Year Determined</th>
+                        <td style="text-align: right; border-bottom: 1px solid black">@Html.DisplayFor(modelItem => modelItem.eventDate)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+           
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <h4 style="color: #900F0F;">Locality Attributes</h4>
+                <table class="locality-attributes" style="border: 1px solid black;">
+                    <tr>
+                        <th style="border-right: 1px solid black; padding: 10px; border-bottom: 1px solid black ">Attribute</th>
+                        <th style="border-right: 1px solid black; padding: 10px; border-bottom: 1px solid black">Value</th>
+                        <th style="border-right: 1px solid black; padding: 10px; border-bottom: 1px solid black">Determiner</th>
+                        <th style="border-right: 1px solid black; padding: 10px; border-bottom: 1px solid black">Date</th>
+                        <th style="border-right: 1px solid black; padding: 10px; border-bottom: 1px solid black">Remark</th>
+                    </tr>
+                    @{int i = 0; }
+                    @while (i < Model.localityAttributes.Length)
+                    {
+                        if (!Model.localityAttributes[i].Equals(""))
+                        {
+                            <tr>
+                                <td style="border-right: 1px solid black; padding: 10px; border-bottom: 1px solid black;">@Html.DisplayFor(modelItem => modelItem.localityAttributes[i])</td>
+                                <td style="border-right: 1px solid black; padding: 10px; border-bottom: 1px solid black;">@Html.DisplayFor(modelItem => modelItem.attributeValues[i])</td>
+                                <td style="border-right: 1px solid black; padding: 10px; border-bottom: 1px solid black;">@Html.DisplayFor(modelItem => modelItem.attributeDeterminers[i])</td>
+                                <td style="border-right: 1px solid black; padding: 10px; border-bottom: 1px solid black;">@Html.DisplayFor(modelItem => modelItem.attributeDates[i])</td>
+                                <td style="border-right: 1px solid black; padding: 10px; border-bottom: 1px solid black;">@Html.DisplayFor(modelItem => modelItem.attributeRemarks[i])</td>
+                            </tr>
+                        }
+                        i++;
+                    }
+                </table>
+            </div>
+            <h3 style="text-align: center;padding-right:50px;color: #900F0F; ">Location  @Html.DisplayFor(modelItem => modelItem.Lat)@Html.DisplayFor(modelItem => modelItem.Long)</h3>
+            <div class="col-lg-4 col-lg-offset-3" style="width:410px;height: 300px; display:block; " id="map"></div>
+            
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-7" style="background-color:#f8f8f8; width:400px; padding-left:10px;">
+
+                <table style="background-color:#f8f8f8; border:none; font-size:small; width:400px">
+
+                    <tr>
+                        <td style="text-align:left; border-bottom: 1px solid black"><b>Event Type:</b></td>
+                        <td style="text-align:right; border-bottom: 1px solid black">@Html.DisplayFor(modelItem => modelItem.eventType)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; border-bottom: 1px solid black"><b>Event Date:</b></td>
+                        <td style="text-align:right; border-bottom: 1px solid black">@Html.DisplayFor(modelItem => modelItem.eventDate)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; border-bottom: 1px solid black"><b>Continent/Ocean:</b></td>
+                        <td style="text-align:right; border-bottom: 1px solid black">@Html.DisplayFor(modelItem => modelItem.Continent_Ocean)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; border-bottom: 1px solid black"><b>Country:</b></td>
+                        <td style="text-align:right; border-bottom: 1px solid black">@Html.DisplayFor(modelItem => modelItem.Country)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; border-bottom: 1px solid black"><b>State/Province:</b></td>
+                        <td style="text-align:right; border-bottom: 1px solid black">@Html.DisplayFor(modelItem => modelItem.State)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; border-bottom: 1px solid black"><b>County/Municipality:</b></td>
+                        <td style="text-align:right; border-bottom: 1px solid black">@Html.DisplayFor(modelItem => modelItem.County)</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:left; border-bottom: 1px solid black"><b>Specific Locality:</b></td>
+                        <td style="text-align:right; border-bottom: 1px solid black">@Html.DisplayFor(modelItem => modelItem.Locality)</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+        function myMap() {
+            var mapProp = {
+                center: (47.608013, -122.335167),
+                zoom: 9,
+            };
+            var map = new google.maps.Map(document.getElementById("map"), { center: new google.maps.LatLng(@Model.mapLat,@Model.mapLong), zoom: 10, });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbpCr3ggrh0va6DTI9rsSBrXw-dQ_pic&callback=myMap"></script>
+    
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+        function getSlideIndex() {
+            return slideIndex;
+        }
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbpCr3ggrh0va6DTI9rsSBrXw-dQ_pic&callback=myMap"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+</body>
+</html>

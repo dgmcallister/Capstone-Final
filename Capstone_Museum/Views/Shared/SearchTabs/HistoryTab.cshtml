@@ -1,0 +1,379 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model GenResults.ResultObject
+
+<div class="tab-pane" id="history-6">
+    <h1>Search the Ethnology and History Collections : </h1>
+
+    <hr>
+    <div>
+        <div class="col-md-1">
+            Collection:
+        </div>
+        <div class="col-md-3">
+            <div>
+                <input type="checkbox" id="Built Environment Objects" />
+                <label for="Built Environment Objects">Built Environment Objects</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Furnishings" />
+                <label for="Furnishings">Furnishings</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Personal Objects" />
+                <label for="Personal Objects">Personal Objects</label>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div>
+                <input type="checkbox" id="Tools & Equipment for Materials" />
+                <label for="Tools & Equipment for Materials">Tools & Equipment for Materials</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Tools & Equipment for Science/Technology" />
+                <label for="Tools & Equipment for Science/Technology">Tools & Equipment for Science/Technology</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Tools & Equipment for Communication" />
+                <label for="Tools & Equipment for Communication">Tools & Equipment for Communication</label>
+            </div>
+        </div>
+        <div>
+            <div>
+                <input type="checkbox" id="Distrubution & Transportation Objects" />
+                <label for="Distrubution & Transportation Objects">Distrubution & Transportation Objects</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Communication Objects" />
+                <label for="Communication Objects">Communication Objects</label>
+            </div>
+            <div>
+                <input type="checkbox" id="Recreational Objects" />
+                <label for="Recreational Objects">Recreational Objects</label>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <div>
+                <input type="checkbox" id="Unclassifiable Objects" />
+                <label for="Unclassifiable Objects">Unclassifiable Objects</label>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="site-content" id="skip-to-content">
+        <div class="container">
+            <div class="row">
+
+                @*<div class="col-md-9">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-1">
+                                        Collapsible Group Item #1
+                                        <i class="fa fa-lg fa-angle-down pull-right"></i>
+                                        <i class="fa fa-lg fa-angle-up pull-right"></i>
+                                    </a>
+                                </h4>
+                            </div> <!-- .panel-heading -->
+                            <div id="collapse-1" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                </div> <!-- .panel-body -->
+                            </div> <!-- #collapse-1 -->
+                        </div> <!-- .panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-2" class="collapsed">
+                                        Collapsible Group Item #2
+                                        <i class="fa fa-lg fa-angle-down pull-right"></i>
+                                        <i class="fa fa-lg fa-angle-up pull-right"></i>
+                                    </a>
+                                </h4>
+                            </div> <!-- .panel-heading -->*@
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion-2" href="#collapse-2-6" class="collapsed">
+                                <i class="fa fa-fw fa-lg fa-plus"></i>
+                                <i class="fa fa-fw fa-lg fa-minus"></i>
+                                Advanced Search
+                            </a>
+                        </h4>
+                    </div> <!-- .panel-heading -->
+
+                    <form asp-controller="SearchResults" asp-action="EthnologyIndex">
+                        <div id="collapse-2-6" class="panel-primary">
+                            <div class="panel-body">
+                                <table>
+                                    <th>Taxonomy/Hierarchy:</th>
+                                    <tr>
+                                        <td>GUID:</td>
+                                        <td>ALMNH:EH:<input asp-for="GUID" type="text" name="guid"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>GUID Range:</td>
+                                        <td>ALMNH:EH:<input asp-for="guidStart" type="text" name="guidStart">to ALMNH:EH:<input asp-for="guidEnd" type="text" name="guidEnd"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Scientific Name:</td>
+                                        <td><input asp-for="sciName" type="text" name="sciName"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Kingdom:</td>
+                                        <td><input asp-for="Kingdom" type="text" name="Kingdom"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phylum:</td>
+                                        <td><input asp-for="Phylum" type="text" name="Phylum"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Class:</td>
+                                        <td><input asp-for="Class" type="text" name="Class"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Order:</td>
+                                        <td><input asp-for="Order" type="text" name="Order"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Family:</td>
+                                        <td><input asp-for="Family" type="text" name="Family"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Genus:</td>
+                                        <td><input asp-for="Genus" type="text" name="Genus"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Species:</td>
+                                        <td><input asp-for="Species" type="text" name="Species"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Subspecies:</td>
+                                        <td><input asp-for="Subspecies" type="text" name="Subspecies"></td>
+                                    </tr>
+                                </table>
+
+                                <hr />
+
+                                <table cellpadding="5">
+                                    <tr>
+                                        <th>Locality Data:</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td>Specific Locality:</td>
+                                        <td><input asp-for="Locality" type="text" name="Locality"></td>
+                                    </tr>
+                                    <td>Continent/Ocean</td>
+                                    <td>
+                                        <select asp-for="Continent_Ocean" type="text" name="Continent_Ocean">
+                                            <option></option>
+                                            <option>Africa</option>
+                                            <option>Antarctica</option>
+                                            <option>Asia</option>
+                                            <option>Australia</option>
+                                            <option>Europe</option>
+                                            <option>North America</option>
+                                            <option>South America</option>
+                                            <option>Atlantic Ocean</option>
+                                            <option>Arctic Ocean</option>
+                                            <option>Indian Ocean</option>
+                                            <option>Pacific Ocean</option>
+                                            <option>Southern Ocean</option>
+                                        </select>
+                                    </td>
+                                    <tr>
+
+                                        <td>Date Range:</td>
+                                        <td>
+                                            <select asp-for="begin_month" type="text" name="begin_month">
+                                                <option></option>
+                                                <option>January</option>
+                                                <option>February</option>
+                                                <option>March</option>
+                                                <option>April</option>
+                                                <option>May</option>
+                                                <option>June</option>
+                                                <option>July</option>
+                                                <option>August</option>
+                                                <option>September</option>
+                                                <option>October</option>
+                                                <option>November</option>
+                                                <option>December</option>
+                                            </select>
+                                            <select asp-for="begin_day" type="text" name="begin_day">
+                                                <option></option>
+                                                <option>01</option>
+                                                <option>02</option>
+                                                <option>03</option>
+                                                <option>04</option>
+                                                <option>05</option>
+                                                <option>06</option>
+                                                <option>07</option>
+                                                <option>08</option>
+                                                <option>09</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                                <option>18</option>
+                                                <option>19</option>
+                                                <option>20</option>
+                                                <option>21</option>
+                                                <option>22</option>
+                                                <option>23</option>
+                                                <option>24</option>
+                                                <option>25</option>
+                                                <option>26</option>
+                                                <option>27</option>
+                                                <option>28</option>
+                                                <option>29</option>
+                                                <option>30</option>
+                                                <option>31</option>
+                                            </select>
+                                            <input asp-for="begin_year" type="text" name="begin_year">
+                                        </td>
+                                        <td> to </td>
+                                        <td>
+                                            <select asp-for="end_month" type="text" name="end_month">
+                                                <option></option>
+                                                <option>January</option>
+                                                <option>February</option>
+                                                <option>March</option>
+                                                <option>April</option>
+                                                <option>May</option>
+                                                <option>June</option>
+                                                <option>July</option>
+                                                <option>August</option>
+                                                <option>September</option>
+                                                <option>October</option>
+                                                <option>November</option>
+                                                <option>December</option>
+                                            </select>
+                                            <select asp-for="end_day" type="text" name="end_day">
+                                                <option></option>
+                                                <option>01</option>
+                                                <option>02</option>
+                                                <option>03</option>
+                                                <option>04</option>
+                                                <option>05</option>
+                                                <option>06</option>
+                                                <option>07</option>
+                                                <option>08</option>
+                                                <option>09</option>
+                                                <option>10</option>
+                                                <option>11</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                                <option>14</option>
+                                                <option>15</option>
+                                                <option>16</option>
+                                                <option>17</option>
+                                                <option>18</option>
+                                                <option>19</option>
+                                                <option>20</option>
+                                                <option>21</option>
+                                                <option>22</option>
+                                                <option>23</option>
+                                                <option>24</option>
+                                                <option>25</option>
+                                                <option>26</option>
+                                                <option>27</option>
+                                                <option>28</option>
+                                                <option>29</option>
+                                                <option>30</option>
+                                                <option>31</option>
+                                            </select>
+                                            <input asp-for="end_year" type="text" name="end_year">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>State:</td>
+                                        <td>
+                                            <select asp-for="State" type="text" name="State">
+                                                <option></option>
+                                                <option>Alabama</option>
+                                                <option>Alaska</option>
+                                                <option>Arizona</option>
+                                                <option>Arkansas</option>
+                                                <option>California</option>
+                                                <option>Colorado</option>
+                                                <option>Connecticut</option>
+                                                <option>Delaware</option>
+                                                <option>Florida</option>
+                                                <option>Georgia</option>
+                                                <option>Hawaii</option>
+                                                <option>Idaho</option>
+                                                <option>Illinois</option>
+                                                <option>Indiana</option>
+                                                <option>Iowa</option>
+                                                <option>Kansas</option>
+                                                <option>Kentucky</option>
+                                                <option>Louisiana</option>
+                                                <option>Maine</option>
+                                                <option>Maryland</option>
+                                                <option>Massachusetts</option>
+                                                <option>Michigan</option>
+                                                <option>Minnesota</option>
+                                                <option>Mississippi</option>
+                                                <option>Missouri</option>
+                                                <option>Montana</option>
+                                                <option>Nebraska</option>
+                                                <option>Nevada</option>
+                                                <option>New Hampshire</option>
+                                                <option>New Jersey</option>
+                                                <option>New Mexico</option>
+                                                <option>New York</option>
+                                                <option>North Carolina</option>
+                                                <option>North Dakota</option>
+                                                <option>Ohio</option>
+                                                <option>Oklahoma</option>
+                                                <option>Oregon</option>
+                                                <option>Pennsylvania</option>
+                                                <option>Rhode Island</option>
+                                                <option>South Carolina</option>
+                                                <option>South Dakota</option>
+                                                <option>Tennessee</option>
+                                                <option>Texas</option>
+                                                <option>Utah</option>
+                                                <option>Vermont</option>
+                                                <option>Virginia</option>
+                                                <option>Washington</option>
+                                                <option>West Virginia</option>
+                                                <option>Wisconsin</option>
+                                                <option>Wyoming</option>
+
+                                            </select>
+                                        </td>
+                                    </tr>
+
+
+                                </table>
+
+                                <button type="submit">Search</button>
+                                <button type="reset">Clear All</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+
+
+                </div> <!-- .panel -->
+            </div>
+        </div>
+    </section>
+</div>

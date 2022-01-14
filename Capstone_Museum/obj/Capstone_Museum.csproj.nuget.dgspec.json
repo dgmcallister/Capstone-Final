@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HAdams20\\source\\repos\\Capstone_Museum\\Capstone_Museum\\Capstone_Museum.csproj": {}
+    "C:\\Users\\tcausey22\\source\\repos\\Capstone-Final\\Capstone_Museum\\Capstone_Museum.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HAdams20\\source\\repos\\Capstone_Museum\\Capstone_Museum\\Capstone_Museum.csproj": {
+    "C:\\Users\\tcausey22\\source\\repos\\Capstone-Final\\Capstone_Museum\\Capstone_Museum.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HAdams20\\source\\repos\\Capstone_Museum\\Capstone_Museum\\Capstone_Museum.csproj",
+        "projectUniqueName": "C:\\Users\\tcausey22\\source\\repos\\Capstone-Final\\Capstone_Museum\\Capstone_Museum.csproj",
         "projectName": "Capstone_Museum",
-        "projectPath": "C:\\Users\\HAdams20\\source\\repos\\Capstone_Museum\\Capstone_Museum\\Capstone_Museum.csproj",
-        "packagesPath": "C:\\Users\\HAdams20\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HAdams20\\source\\repos\\Capstone_Museum\\Capstone_Museum\\obj\\",
+        "projectPath": "C:\\Users\\tcausey22\\source\\repos\\Capstone-Final\\Capstone_Museum\\Capstone_Museum.csproj",
+        "packagesPath": "C:\\Users\\tcausey22\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tcausey22\\source\\repos\\Capstone-Final\\Capstone_Museum\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HAdams20\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tcausey22\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,14 +38,19 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[15.0.1, )"
+            },
             "Json.Net": {
               "target": "Package",
               "version": "[1.0.18, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.4, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -65,6 +71,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.22, 3.1.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -73,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

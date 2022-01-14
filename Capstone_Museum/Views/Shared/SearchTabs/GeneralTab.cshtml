@@ -1,0 +1,232 @@
+﻿
+@{
+}
+@model GenResults.ResultObject
+
+<div class="tab-pane active" id="generalSearch-6">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-box box-img bg-light no-top-spacing">
+                <div class="row no-gutter">
+                    <div class="col-md-6 text-left">
+                        <div class="box-body margin-top-60">
+                            <h1>Search All Collections: </h1>
+                            <div align="center">
+                                <form asp-controller="SearchResults" asp-action="PaleoIndex">
+                                    <div id="collapse-2-6" class="panel-primary">
+                                        <div class="panel-body">
+                                            <table>
+                                                <th>Taxonomy/Hierarchy:</th>
+                                                <tr>
+                                                    <td>GUID:</td>
+                                                    <td><input asp-for="GUID" type="text" name="guid"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GUID Range:</td>
+                                                    <td><input asp-for="guidStart" type="text" name="guidStart">to <input asp-for="guidEnd" type="text" name="guidEnd"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Scientific Name:</td>
+                                                    <td><input asp-for="sciName" type="text" name="sciName"></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Kingdom:</td>
+                                                    <td><input asp-for="Kingdom" type="text" name="Kingdom"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Phylum:</td>
+                                                    <td><input asp-for="Phylum" type="text" name="Phylum"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Class:</td>
+                                                    <td><input asp-for="Class" type="text" name="Class"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Order:</td>
+                                                    <td><input asp-for="Order" type="text" name="Order"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Family:</td>
+                                                    <td><input asp-for="Family" type="text" name="Family"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Genus:</td>
+                                                    <td><input asp-for="Genus" type="text" name="Genus"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Species:</td>
+                                                    <td><input asp-for="Species" type="text" name="Species"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Subspecies:</td>
+                                                    <td><input asp-for="Subspecies" type="text" name="Subspecies"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Common Name:</td>
+                                                    <td><input asp-for="commonName" type="text" name="Common Name"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Age:</td>
+                                                    <td><input asp-for="commonName" type="text" name="Common Name"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Age Class:</td>
+                                                    <td><input type="text" name="ageClass"></td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>Determine Date Range:</td>
+                                                    <td>
+                                                        <select asp-for="begin_month" type="text" name="begin_month">
+                                                            <option></option>
+                                                            <option>January</option>
+                                                            <option>February</option>
+                                                            <option>March</option>
+                                                            <option>April</option>
+                                                            <option>May</option>
+                                                            <option>June</option>
+                                                            <option>July</option>
+                                                            <option>August</option>
+                                                            <option>September</option>
+                                                            <option>October</option>
+                                                            <option>November</option>
+                                                            <option>December</option>
+                                                        </select>
+                                                        <select asp-for="begin_day" type="text" name="begin_day">
+                                                            <option></option>
+                                                            <option>01</option>
+                                                            <option>02</option>
+                                                            <option>03</option>
+                                                            <option>04</option>
+                                                            <option>05</option>
+                                                            <option>06</option>
+                                                            <option>07</option>
+                                                            <option>08</option>
+                                                            <option>09</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                            <option>13</option>
+                                                            <option>14</option>
+                                                            <option>15</option>
+                                                            <option>16</option>
+                                                            <option>17</option>
+                                                            <option>18</option>
+                                                            <option>19</option>
+                                                            <option>20</option>
+                                                            <option>21</option>
+                                                            <option>22</option>
+                                                            <option>23</option>
+                                                            <option>24</option>
+                                                            <option>25</option>
+                                                            <option>26</option>
+                                                            <option>27</option>
+                                                            <option>28</option>
+                                                            <option>29</option>
+                                                            <option>30</option>
+                                                            <option>31</option>
+                                                        </select>
+                                                        <input asp-for="begin_year" type="text" name="begin_year">
+                                                    </td>
+                                                    <td> to </td>
+                                                    <td>
+                                                        <select asp-for="end_month" type="text" name="end_month">
+                                                            <option></option>
+                                                            <option>January</option>
+                                                            <option>February</option>
+                                                            <option>March</option>
+                                                            <option>April</option>
+                                                            <option>May</option>
+                                                            <option>June</option>
+                                                            <option>July</option>
+                                                            <option>August</option>
+                                                            <option>September</option>
+                                                            <option>October</option>
+                                                            <option>November</option>
+                                                            <option>December</option>
+                                                        </select>
+                                                        <select asp-for="end_day" type="text" name="end_day">
+                                                            <option></option>
+                                                            <option>01</option>
+                                                            <option>02</option>
+                                                            <option>03</option>
+                                                            <option>04</option>
+                                                            <option>05</option>
+                                                            <option>06</option>
+                                                            <option>07</option>
+                                                            <option>08</option>
+                                                            <option>09</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                            <option>13</option>
+                                                            <option>14</option>
+                                                            <option>15</option>
+                                                            <option>16</option>
+                                                            <option>17</option>
+                                                            <option>18</option>
+                                                            <option>19</option>
+                                                            <option>20</option>
+                                                            <option>21</option>
+                                                            <option>22</option>
+                                                            <option>23</option>
+                                                            <option>24</option>
+                                                            <option>25</option>
+                                                            <option>26</option>
+                                                            <option>27</option>
+                                                            <option>28</option>
+                                                            <option>29</option>
+                                                            <option>30</option>
+                                                            <option>31</option>
+                                                        </select>
+                                                        <input asp-for="end_year" type="text" name="end_year">
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <hr />
+
+                                            <table cellpadding="5">
+                                                <tr>
+                                                    <th>Locality Data:</th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Specific Locality:</td>
+                                                    <td><input asp-for="Locality" type="text" name="Locality"></td>
+                                                </tr>
+                                                <td>Continent/Ocean</td>
+                                                <td>
+                                                    <input asp-for="Continent_Ocean" type="text" name="Continent_Ocean">
+
+                                                </td>
+                                                <tr>
+                                                    <td>Country</td>
+                                                    <td><input asp-for="Country" type="text" name="Country"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>State/Province</td>
+                                                    <td><input asp-for="State" type="text" name="state"></td>
+                                                </tr>
+
+
+
+
+                                            </table>
+                                            @*<input asp-for="csv"type="checkbox" name="csv" id="csv" />
+                <label for="csv">Export Results to CSV File</label>*@
+                                            <button type="submit">Search</button>
+                                            <button type="reset">Clear All</button>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div> <!-- .box-body -->
+                    </div> <!-- .col-md-6 -->
+                </div> <!-- .row -->
+            </div> <!-- .box-img -->
+        </div> <!-- .col-md-12 -->
+    </div> <!-- .row -->
+</div>
