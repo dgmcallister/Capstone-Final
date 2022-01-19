@@ -1,119 +1,110 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    @*<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Museum_Prototypes</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />*@
+	<head>
+		@*<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>@ViewData["Title"] - Museum_Prototypes</title>
+		<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="~/css/site.css" />*@
 
-    <title>Tables - UA Template Documentation | The University of Alabama</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tables - UA Template Documentation | The University of Alabama</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,300,600,700" rel="stylesheet" />
-    <link href="../../css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../../css/font-awesome.min.css" rel="stylesheet" />
-    <link href="../../css/style.min.css" rel="stylesheet" />
-    <link href="../css/prism.min.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,300,600,700" rel="stylesheet" />
+		<link href="../../css/bootstrap.min.css" rel="stylesheet" />
+		<link href="../../css/font-awesome.min.css" rel="stylesheet" />
+		<link href="../../css/style.min.css" rel="stylesheet" />
+		<link href="../css/prism.min.css" rel="stylesheet" />
 
-</head>
-<body>
-    <header>
-        <div class="sticky-header-container">
-            <div id="sticky-header" class="header-main header-dark navbar mega-menu disable-hover" style="background-color: #900F0F" data-spy="affix" data-offset-top="50">
-                <div class="container">
-                    <div class="navbar-container">
-                        <div class="navbar-header">
-                            <ul class="nav navbar-nav main-nav">
-                                <li class="visible-xs visible-sm">
-                                    <a href="#" class="nav-toggle text-center">
-                                        <span class="sr-only">Close navigation</span>
-                                        <i class="fa fa-times"></i>
-                                    </a>
-                                </li>
-
-
-
-
-                                <li class="nav-item">
-                                    <a href="/Search">
-                                        Search
-                                    </a>
-                                </li>
-                                @*<li class="nav-item">
-                                    <a href="/Searchresults">
-                                        Search Results
-                                    </a>
-                                </li>*@
-                            </ul>
-
-                            <a href="#" class="btn btn-default nav-toggle visible-xs visible-sm">
-                                <span class="sr-only">Toggle navigation</span>
-                                <i class="fa fa-bars"></i>
-                            </a>
-                        </div> <!-- .navbar-header -->
-
-                        <nav class="navbar-right">
-                            
-                            <img src="~/css/pictures/cropped-ALMNH_white.png" width="240" height="100" style="padding-top:12px; padding-bottom:13px;" />
-                            <img src="~/css/pictures/DMRC Logo wide.jpg" width="240" height="100" style="padding-top:10px; padding-bottom:10px;" />
-                        </nav>
-                    </div> <!-- .navbar-container -->
-                </div> <!-- .container -->
-            </div> <!-- .header-main -->
-        </div> <!-- .sticky-header-container -->
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer>
-        <div class="footer-copyright bg-dark">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-3">
-                                <a class="ua-logo ua-logo-stacked" href="https://www.ua.edu" title="The University of Alabama" rel="home">
-                                    <span class="sr-only">The University of Alabama</span>
-                                </a>
-                            </div> <!-- .col-md-3 -->
-
-                            <div class="col-md-9 col-md-9">
-                                <div class="pull-right">
-                                    <ul class="disclaimer-list list-inline text-right">
-                                        <li><a href="#">Link 1</a></li>
-                                        <li><a href="#">Link 2</a></li>
-                                        <li><a href="#">Link 3</a></li>
-                                        <li><a href="#">Link 4</a></li>
-                                        <li><a href="#">Link 5</a></li>
-                                        <li><a href="#">Link 6</a></li>
-                                        <li><a href="#">Link 7</a></li>
-                                    </ul>
-
-                                    <p class="copyright-text text-right">
-                                        <a href="https://www.ua.edu/copyright">Copyright &copy; 2016</a> <a href="https://www.ua.edu">The University of Alabama</a>
-                                        | <a href="https://www.ua.edu/disclaimer">Disclaimer</a>
-                                        | <a href="https://www.ua.edu/privacy">Privacy</a>
-                                    </p>
-                                </div> <!-- .pull-right -->
-                            </div> <!-- .col-md-9 -->
-                        </div> <!-- .row -->
-                    </div> <!-- .col-md-12 -->
-                </div> <!-- .row -->
-            </div> <!-- .container -->
-        </div> <!-- .footer-copyright -->
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    @RenderSection("Scripts", required: false)
-</body>
+	</head>
+	<body>
+		<header>
+			<div class="sticky-header-container">
+				<div id="sticky-header" class="header-main header-dark navbar mega-menu disable-hover" style="background-color: #900F0F" data-spy="affix" data-offset-top="50">
+					<div class="container">
+						<div class="navbar-container">
+							<div class="navbar-header">
+								<ul class="nav navbar-nav main-nav">
+									<li class="visible-xs visible-sm">
+										<a href="#" class="nav-toggle text-center">
+											<span class="sr-only">Close navigation</span>
+											<i class="fa fa-times"></i>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="/Search">
+											Search
+										</a>
+									</li>
+									@*<li class="nav-item">
+										<a href="/Searchresults">
+											Search Results
+										</a>
+									</li>*@
+								</ul>
+								<a href="#" class="btn btn-default nav-toggle visible-xs visible-sm">
+									<span class="sr-only">Toggle navigation</span>
+									<i class="fa fa-bars"></i>
+								</a>
+							</div> <!-- .navbar-header -->
+							<nav class="navbar-right">
+								
+								<img src="~/css/pictures/cropped-ALMNH_white.png" width="240" height="100" style="padding-top:12px; padding-bottom:13px;" />
+								<img src="~/css/pictures/DMRC Logo wide.jpg" width="240" height="100" style="padding-top:10px; padding-bottom:10px;" />
+							</nav>
+						</div> <!-- .navbar-container -->
+					</div> <!-- .container -->
+				</div> <!-- .header-main -->
+			</div> <!-- .sticky-header-container -->
+		</header>
+		<div class="container">
+			<main role="main" class="pb-3">
+				@RenderBody()
+			</main>
+		</div>
+		<footer>
+			<div class="footer-copyright bg-dark">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-3 col-sm-3">
+									<a class="ua-logo ua-logo-stacked" href="https://www.ua.edu" title="The University of Alabama" rel="home">
+										<span class="sr-only">The University of Alabama</span>
+									</a>
+								</div> <!-- .col-md-3 -->
+								<div class="col-md-9 col-md-9">
+									<div class="pull-right">
+										<ul class="disclaimer-list list-inline text-right">
+											<li><a href="#">Link 1</a></li>
+											<li><a href="#">Link 2</a></li>
+											<li><a href="#">Link 3</a></li>
+											<li><a href="#">Link 4</a></li>
+											<li><a href="#">Link 5</a></li>
+											<li><a href="#">Link 6</a></li>
+											<li><a href="#">Link 7</a></li>
+										</ul>
+										<p class="copyright-text text-right">
+											<a href="https://www.ua.edu/copyright">Copyright &copy; 2016</a> <a href="https://www.ua.edu">The University of Alabama</a>
+											| <a href="https://www.ua.edu/disclaimer">Disclaimer</a>
+											| <a href="https://www.ua.edu/privacy">Privacy</a>
+										</p>
+									</div> <!-- .pull-right -->
+								</div> <!-- .col-md-9 -->
+							</div> <!-- .row -->
+						</div> <!-- .col-md-12 -->
+					</div> <!-- .row -->
+				</div> <!-- .container -->
+			</div> <!-- .footer-copyright -->
+		</footer>
+		<script src="~/lib/jquery/dist/jquery.min.js"></script>
+		<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="~/js/site.js" asp-append-version="true"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		@RenderSection("Scripts", required: false)
+	</body>
 </html>
